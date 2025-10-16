@@ -1,0 +1,19 @@
+.flexRowContent--main-header-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 16px;
+  width: 100vw;
+  height: 55px;
+  background-color: #fff;
+}
+
+.flexRowContent--header-mobile-left, .flexRowContent--header-mobile-right {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.flexRowContent--header-mobile-right {
+  padding: 0;
+}

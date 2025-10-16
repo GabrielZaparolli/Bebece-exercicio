@@ -1,0 +1,116 @@
+{
+    "header-layout.mobile": {
+        "title": "Header Mobile",
+        "children": [
+            "header-row#mobile"
+        ]
+    },
+    "header-row#mobile": {
+        "children": [
+            "flex-layout.row#header-mobile"
+        ],
+        "props": {
+            "blockClass": "header-mobile",
+            "zIndex": 5,
+            "sticky": true,
+            "fullWidth": true
+        }
+    },
+    "flex-layout.row#header-mobile": {
+        "children": [
+            "flex-layout.row#header-mobile-left",
+            "flex-layout.row#header-mobile-center",
+            "flex-layout.row#header-mobile-right"
+        ],
+        "props": {
+            "blockClass": "main-header-mobile",
+            "preventHorizontalStretch": true,
+            "preserveLayoutOnMobile": true,
+            "fullWidth": true
+        }
+    },
+    "flex-layout.row#header-mobile-right": {
+        "children": [
+            "login",
+            "minicart.v2"
+        ],
+        "props": {
+            "blockClass": "header-mobile-right"
+        }
+    },
+    "minicart.v2": {
+        "title": "Minicart",
+        "props": {
+            "variation": "drawer",
+            "drawerSlideDirection": "rightToLeft",
+            "maxDrawerWidth": 440,
+            "openOnHover": false,
+            "itemCountMode": "total",
+            "backdropMode": "visible",
+            "blockClass": "custom-minicart",
+            "drawerTitle": "Carrinho", 
+            "showDrawerTitle": true, 
+            "showCloseButton": true 
+        },
+        "children": [
+            "minicart-base-content"
+        ]
+    },
+    "login": {
+        "props": {
+            "iconColor": "#000000",
+            "useIcon": true,
+            "showIconProfile": true,
+            "showLabel": false,
+            "blockClass": "user-icon"
+        }
+    },
+    "flex-layout.row#header-mobile-center": {
+        "children": [
+            "logo"
+        ]
+    },
+    "logo": {
+        "title": "Logo header",
+        "props": {
+            "width": 102,
+            "height": 24,
+            "url": "assets/svgs/logo.svg",
+            "href": "/",
+            "alt": "Logo Bebecê"
+        }
+    },
+    "flex-layout.row#header-mobile-left": {
+        "children": [
+            "image#menu",
+            "image#search"
+        ],
+        "props": {
+            "blockClass": "header-mobile-left"
+        }
+    },
+    "image#menu": {
+        "props": {
+            "src": "assets/svgs/menu.svg",
+            "alt": "Menu",
+            "width": 14,
+            "height": 14,
+            "maxHeight": 24
+        }
+    },
+    "image#search": {
+        "props": {
+            "src": "assets/svgs/search.svg",
+            "alt": "Search",
+            "width": 14,
+            "height": 14,
+            "maxHeight": 24
+        }
+    },
+    "icon-cart#minicart-icon": {
+        "props": {
+            "size": 24,
+            "color": "#000000"
+        }
+    }
+}

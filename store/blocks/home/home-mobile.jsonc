@@ -1,0 +1,19 @@
+{
+    "responsive-layout.mobile": {
+        "title": "Home mobile",
+        "children": [
+            "flex-layout.row#home-mobile"
+        ]
+    },
+     "flex-layout.row#home-mobile": {
+        "children": [],
+        "props": {
+            "blockClass": "main-home-mobile",
+            "preventHorizontalStretch": true,
+            "preserveLayoutOnMobile": true,
+            "fullWidth": true
+        }
+        
+    }
+}
+    
