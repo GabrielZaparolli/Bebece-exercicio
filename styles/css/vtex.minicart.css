@@ -21,3 +21,20 @@
 .openIconContainer--custom-minicart .cartIcon--custom-minicart {
   display: none;
 }
+
+.closeIconContainer--custom-minicart {
+  display: flex;
+  justify-content: flex-end;
+}
+.closeIconContainer--custom-minicart .closeIcon--custom-minicart {
+  width: 25px;
+  height: 25px;
+}
+
+.minicartTitle {
+  position: absolute;
+  top: 10px;
+  font-size: 1.1rem;
+  color: #1f2123;
+  font-weight: 400;
+}
