@@ -8,13 +8,32 @@
     background-color: #fff;
 }
 
-.flexRowContent--header-mobile-left, .flexRowContent--header-mobile-right {
+.flexRowContent--header-mobile-left,
+.flexRowContent--header-mobile-right {
     display: flex;
     flex-direction: row;
     gap: 16px;
 }
 
-.flexRowContent--header-mobile-right{
+.flexRowContent--header-mobile-right {
+    padding: 0;
+}
+
+.flexRow--main-footer-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: #B11B26;
+    padding: 24px 20px 64px 20px;
+}
+
+.flexRowContent--footer-logo {
+    width: 392px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
     padding: 0;
 }
 
