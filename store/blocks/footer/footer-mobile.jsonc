@@ -1,0 +1,53 @@
+{
+    "footer-layout.mobile": {
+        "title": "Footer Mobile",
+        "children": [
+            "flex-layout.row#footer-mobile"
+        ]
+    },
+    "flex-layout.row#footer-mobile": {
+        "children": [
+            "flex-layout.row#footer-logo",
+            "flex-layout.row#footer-redes-sociais"
+            // "flex-layout.row#footer-links",
+        ],
+        "props": {
+            "blockClass": "main-footer-mobile"
+        }
+    },
+    "flex-layout.row#footer-logo": {
+        "children": [
+            "image#logo-footer"
+        ],
+        "props": {
+            "blockClass": "footer-logo"
+        }
+    },
+    "image#logo-footer": {
+        "title": "logo footer",
+        "props": {
+            "src": "assets/svgs/logo-creme.svg",
+            "blockClass": "footer-logo-img"
+        }
+    },
+    "flex-layout.row#footer-redes-sociais": {
+        "children": [
+            "social-networks"
+        ]
+    },
+    "social-networks": {
+        "title": "Redes Sociais",
+        "props": {
+            "social-networks": [
+                {
+                    "url": "/",
+                    "name": "facebook"
+                },
+                {
+                    "url": "/",
+                    "name": "instagram"
+                }
+            ]
+        }
+    }
+}

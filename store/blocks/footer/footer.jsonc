@@ -1,0 +1,8 @@
+{
+    "footer": {
+        "title": "Footer mobile",
+        "blocks": [
+            "footer-layout.mobile"
+        ]
+    }
+}
