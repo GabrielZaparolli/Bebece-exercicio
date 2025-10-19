@@ -8,8 +8,8 @@
     "flex-layout.row#footer-mobile": {
         "children": [
             "flex-layout.row#footer-logo",
-            "flex-layout.row#footer-redes-sociais"
-            // "flex-layout.row#footer-links",
+            "flex-layout.row#footer-redes-sociais",
+            "flex-layout.col#footer-links"
         ],
         "props": {
             "blockClass": "main-footer-mobile"
@@ -32,22 +32,213 @@
     },
     "flex-layout.row#footer-redes-sociais": {
         "children": [
-            "social-networks"
+            "flex-layout.row#container-icones-sociais"
+        ],
+        "props": {
+            "horizontalAlign": "center"
+        }
+    },
+    "flex-layout.row#container-icones-sociais": {
+        "title": "Redes Sociais",
+        "children": [
+            "link#instagram-link",
+            "link#facebook-link",
+            "link#pinterest-link",
+            "link#twitter-link",
+            "link#tiktok-link"
+        ],
+        "props": {
+            "blockClass": "icones-redes-sociais",
+            "stretchChildrenWidth": false
+        }
+    },
+    "link#instagram-link": {
+        "props": {
+            "href": "/",
+            "target": "_blank",
+            "blockClass": "links-icones-socias"
+        },
+        "children": [
+            "image#instagram-icon"
         ]
     },
-    "social-networks": {
-        "title": "Redes Sociais",
+    "image#instagram-icon": {
         "props": {
-            "social-networks": [
-                {
-                    "url": "/",
-                    "name": "facebook"
-                },
-                {
-                    "url": "/",
-                    "name": "instagram"
-                }
-            ]
+            "src": "assets/svgs/redesSociais/instagram.svg"
+        }
+    },
+    "link#facebook-link": {
+        "props": {
+            "href": "/",
+            "target": "_blank",
+            "blockClass": "links-icones-socias"
+        },
+        "children": [
+            "image#facebook-icon"
+        ]
+    },
+    "image#facebook-icon": {
+        "props": {
+            "src": "assets/svgs/redesSociais/facebook.svg"
+        }
+    },
+    "link#pinterest-link": {
+        "props": {
+            "href": "/",
+            "target": "_blank",
+            "blockClass": "links-icones-socias"
+        },
+        "children": [
+            "image#pinterest-icon"
+        ]
+    },
+    "image#pinterest-icon": {
+        "props": {
+            "src": "assets/svgs/redesSociais/pinterest.svg"
+        }
+    },
+    "link#twitter-link": {
+        "props": {
+            "href": "/",
+            "target": "_blank",
+            "blockClass": "links-icones-socias"
+        },
+        "children": [
+            "image#twitter-icon"
+        ]
+    },
+    "image#twitter-icon": {
+        "props": {
+            "src": "assets/svgs/redesSociais/twitter.svg"
+        }
+    },
+    "link#tiktok-link": {
+        "props": {
+            "href": "/",
+            "target": "_blank",
+            "blockClass": "links-icones-socias"
+        },
+        "children": [
+            "image#tiktok-icon"
+        ]
+    },
+    "image#tiktok-icon": {
+        "props": {
+            "src": "assets/svgs/redesSociais/tik-tok.svg"
+        }
+    },
+    //links footer
+    "flex-layout.col#footer-links": {
+        "children": [
+            "flex-layout.col#footer-sobre-empresa",
+            "flex-layout.col#footer-politicas"
+        ],
+        "props": {
+            "blockClass": "footer-links-container",
+            "rowGap": 4 // Adiciona um espaço vertical entre "Sobre" e "Políticas"
+        }
+    },
+    "flex-layout.col#footer-sobre-empresa": {
+        "children": [
+            "rich-text#titulo-sobre-empresa",
+            "menu#menu-sobre-empresa"
+        ],
+        "props": {
+            "blockClass": "footer-coluna-links",
+            "rowGap": 4 // Espaço entre o título e os links
+        }
+    },
+    "rich-text#titulo-sobre-empresa": {
+        "props": {
+            "text": "Sobre a empresa",
+            "blockClass": "footer-titulo-coluna"
+        }
+    },
+    "menu#menu-sobre-empresa": {
+        "children": [
+            "menu-item#link-quem-somos",
+            "menu-item#link-fale-conosco"
+        ],
+        "props": {
+            "orientation": "vertical", // Deixa os links um embaixo do outro
+            "blockClass": "lista-links-footer"
+        }
+    },
+    "menu-item#link-quem-somos": {
+        "props": {
+            "type": "custom",
+            "href": "/",
+            "text": "Quem somos",
+            "blockClass": "item-link-footer" // Classe genérica para estilizar
+        }
+    },
+    "menu-item#link-fale-conosco": {
+        "props": {
+            "type": "custom",
+            "href": "/",
+            "text": "Fale conosco",
+            "blockClass": "item-link-footer" // Mesma classe
+        }
+    },
+    // --- SEÇÃO "POLÍTICAS" ---
+    "flex-layout.col#footer-politicas": {
+        "children": [
+            "rich-text#titulo-politicas",
+            "menu#menu-politicas"
+        ],
+        "props": {
+            "blockClass": "footer-coluna-links", // Pode usar a mesma classe da outra coluna
+            "rowGap": 4 // Espaço entre o título e os links
+        }
+    },
+    "rich-text#titulo-politicas": {
+        "props": {
+            "text": "Políticas",
+            "blockClass": "footer-titulo-coluna" // Mesma classe do outro título
+        }
+    },
+    "menu#menu-politicas": {
+        "children": [
+            "menu-item#link-politica-privacidade",
+            "menu-item#link-termos-uso",
+            "menu-item#link-politica-entrega",
+            "menu-item#link-politica-cupons"
+        ],
+        "props": {
+            "orientation": "vertical",
+            "blockClass": "lista-links-footer"
+        }
+    },
+    "menu-item#link-politica-privacidade": {
+        "props": {
+            "type": "custom",
+            "href": "/",
+            "text": "Política de Privacidade",
+            "blockClass": "item-link-footer"
+        }
+    },
+    "menu-item#link-termos-uso": {
+        "props": {
+            "type": "custom",
+            "href": "/",
+            "text": "Termos de Uso",
+            "blockClass": "item-link-footer"
+        }
+    },
+    "menu-item#link-politica-entrega": {
+        "props": {
+            "type": "custom",
+            "href": "/",
+            "text": "Política de Entrega",
+            "blockClass": "item-link-footer"
+        }
+    },
+    "menu-item#link-politica-cupons": {
+        "props": {
+            "type": "custom",
+            "href": "/",
+            "text": "Política de Cupom e Descontos",
+            "blockClass": "item-link-footer"
         }
     }
 }

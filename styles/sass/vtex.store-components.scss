@@ -1,0 +1,16 @@
+.container {
+    max-width: unset !important;
+    padding: 0 !important;
+    width: 100%; 
+
+    .imageElement--footer-logo-img {
+        max-width: 392px; 
+        height: auto; 
+        margin: 0 auto; 
+
+        @media (max-width: 360px) {
+            max-width: 100%; 
+            width: 100%; 
+        }
+    }
+}

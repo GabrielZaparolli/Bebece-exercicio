@@ -1,0 +1,16 @@
+@use '../sass/padroes/fonts.scss' as vars;
+
+.menuContainer--lista-links-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.styledLinkContent--item-link-footer{
+    color: #fff;
+    font-weight: 400;
+    text-decoration: underline;
+    font-size: 14px;
+    font-family: vars.$fontFamilyOpen;
+}
