@@ -7,9 +7,18 @@
     },
     "flex-layout.row#footer-mobile": {
         "children": [
+            "flex-layout.col#footer-mobile"
+        ],
+        "props": {
+            "blockClass": "flexCol--main-footer-mobile"
+        }
+    },
+    "flex-layout.col#footer-mobile": {
+         "children": [
             "flex-layout.row#footer-logo",
             "flex-layout.row#footer-redes-sociais",
-            "flex-layout.col#footer-links"
+            "flex-layout.col#footer-sobre-empresa",
+            "flex-layout.col#footer-politicas"
         ],
         "props": {
             "blockClass": "main-footer-mobile"
@@ -128,16 +137,6 @@
         }
     },
     //links footer
-    "flex-layout.col#footer-links": {
-        "children": [
-            "flex-layout.col#footer-sobre-empresa",
-            "flex-layout.col#footer-politicas"
-        ],
-        "props": {
-            "blockClass": "footer-links-container",
-            "rowGap": 4 // Adiciona um espaço vertical entre "Sobre" e "Políticas"
-        }
-    },
     "flex-layout.col#footer-sobre-empresa": {
         "children": [
             "rich-text#titulo-sobre-empresa",
@@ -145,7 +144,7 @@
         ],
         "props": {
             "blockClass": "footer-coluna-links",
-            "rowGap": 4 // Espaço entre o título e os links
+            "rowGap": 4
         }
     },
     "rich-text#titulo-sobre-empresa": {
@@ -160,7 +159,7 @@
             "menu-item#link-fale-conosco"
         ],
         "props": {
-            "orientation": "vertical", // Deixa os links um embaixo do outro
+            "orientation": "vertical", 
             "blockClass": "lista-links-footer"
         }
     },
@@ -169,7 +168,7 @@
             "type": "custom",
             "href": "/",
             "text": "Quem somos",
-            "blockClass": "item-link-footer" // Classe genérica para estilizar
+            "blockClass": "item-link-footer" 
         }
     },
     "menu-item#link-fale-conosco": {
@@ -177,24 +176,24 @@
             "type": "custom",
             "href": "/",
             "text": "Fale conosco",
-            "blockClass": "item-link-footer" // Mesma classe
+            "blockClass": "item-link-footer" 
         }
     },
-    // --- SEÇÃO "POLÍTICAS" ---
+    
     "flex-layout.col#footer-politicas": {
         "children": [
             "rich-text#titulo-politicas",
             "menu#menu-politicas"
         ],
         "props": {
-            "blockClass": "footer-coluna-links", // Pode usar a mesma classe da outra coluna
-            "rowGap": 4 // Espaço entre o título e os links
+            "blockClass": "footer-coluna-links", 
+            "rowGap": 4 
         }
     },
     "rich-text#titulo-politicas": {
         "props": {
             "text": "Políticas",
-            "blockClass": "footer-titulo-coluna" // Mesma classe do outro título
+            "blockClass": "footer-titulo-coluna" 
         }
     },
     "menu#menu-politicas": {
