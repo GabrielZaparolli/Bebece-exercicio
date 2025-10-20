@@ -2,8 +2,45 @@
     "header-layout.mobile": {
         "title": "Header Mobile",
         "children": [
-            "header-row#mobile"
+            "disclosure-layout#search-disclosure"
         ]
+    },
+    "disclosure-layout#search-disclosure": {
+        "children": [
+            "header-row#mobile",
+            "disclosure-content#search-disclosure"
+        ]
+    },
+    "disclosure-content#search-disclosure": {
+        "children": [
+            "header-row#search-mobile"
+        ],
+        "props": {
+            "blockClass": "search-disclosure-content"
+        }
+    },
+    "flex-layout.row#header-mobile-left": {
+        "children": [
+            "image#menu",
+            "disclosure-trigger#search-disclosure"
+        ],
+        "props": {
+            "blockClass": "header-mobile-left"
+        }
+    },
+    "disclosure-trigger#search-disclosure": {
+        "children": [
+            "image#search"
+        ]
+    },
+    "image#search": {
+        "props": {
+            "src": "assets/svgs/search.svg",
+            "alt": "Search",
+            
+            "blockClass": "search-icon"
+            
+        }
     },
     "header-row#mobile": {
         "children": [
@@ -118,15 +155,6 @@
             "alt": "Logo Bebecê"
         }
     },
-    "flex-layout.row#header-mobile-left": {
-        "children": [
-            "image#menu",
-            "image#search"
-        ],
-        "props": {
-            "blockClass": "header-mobile-left"
-        }
-    },
     "image#menu": {
         "props": {
             "src": "assets/svgs/menu.svg",
@@ -136,19 +164,30 @@
             "maxHeight": 24
         }
     },
-    "image#search": {
-        "props": {
-            "src": "assets/svgs/search.svg",
-            "alt": "Search",
-            "width": 14,
-            "height": 14,
-            "maxHeight": 24
-        }
-    },
     "icon-cart#minicart-icon": {
         "props": {
             "size": 24,
             "color": "#000000"
+        }
+    },
+    "header-row#search-mobile": {
+        "children": [
+            "search-bar"
+        ],
+        "props": {
+            "blockClass": "header-search-row-mobile",
+            "fullWidth": true
+        }
+    },
+
+    "search-bar": {
+        "props": {
+            "placeholder": "Digite sua busca",
+            "blockClass": "searchBarContainer",
+            "showSuggestionsOnFocus": true,
+            "maxTopSearches": 5,
+            "autocompleteMode": "terms",
+            "autoFocus": true
         }
     }
 }
