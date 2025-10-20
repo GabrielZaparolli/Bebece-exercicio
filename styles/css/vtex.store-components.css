@@ -1,10 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 .container {
   max-width: unset !important;
   padding: 0 !important;
   width: 100%;
 }
 .container .imageElement--footer-logo-img {
-  max-width: 392px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
 }
@@ -13,4 +14,52 @@
     max-width: 100%;
     width: 100%;
   }
+}
+
+.searchBarContainer {
+  padding: 0;
+  width: calc(100% - 2.5rem) !important;
+}
+.searchBarContainer :global(.vtex-input-prefix__group) {
+  border-radius: 1000px !important;
+  border: 1px solid #cacbcc;
+  background: transparent;
+}
+.searchBarContainer :global(.vtex-styleguide-9-x-input) {
+  background-color: #f7f7f7;
+  border: none !important;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #8a8a8a;
+  font-weight: 400;
+}
+.searchBarContainer :global(.vtex-input__suffix) {
+  background-color: #f7f7f7;
+}
+.searchBarContainer :global(.vtex-input__suffix)::after {
+  content: "";
+  display: flex;
+  width: 16px;
+  height: 17px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='none'%3E%3Cpath d='M7.07 14.077a6.507 6.507 0 100-13.014 6.507 6.507 0 000 13.014z' stroke='%238A8A8A' stroke-width='.7' stroke-miterlimit='10'/%3E%3Cpath d='M11.718 12.218l3.719 3.719' stroke='%238A8A8A' stroke-width='.7' stroke-miterlimit='10' stroke-linecap='square'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+}
+.searchBarContainer .searchBarIcon--searchBarContainer {
+  display: none;
+}
+
+.imageElement--search-icon {
+  width: 24px;
+  height: 14px;
+  padding: 0;
+}
+
+.portalWrapper--searchBarContainer {
+  position: relative;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.resultsList--searchBarContainer {
+  width: 100%;
 }

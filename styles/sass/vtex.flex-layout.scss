@@ -1,9 +1,12 @@
+.flexRow--main-header-mobile{
+    width: 100%;
+}
+
 .flexRowContent--main-header-mobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 16px;
-    width: 100vw;
     height: 55px;
     background-color: #fff;
 }
@@ -19,25 +22,20 @@
     padding: 0;
 }
 
-
-
-.flexRow--main-footer-mobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.flexRow--flexCol--main-footer-mobile{
     background-color: #B11B26;
-    padding: 24px 20px 64px 20px;
-    overflow-x: hidden;
+    padding: 20px 0 64px 0;
+    
+    height: auto;
+    margin: 0;
 }
-
-.flexRowContent--main-footer-mobile {
+.flexCol--main-footer-mobile{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     gap: 64px;
-
+    
+    
 }
 
 .flexRowContent--footer-logo {
@@ -56,13 +54,6 @@
     gap: 16px;
 }
 
-.flexCol--footer-links-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 64px;
-
-}
 
 .flexCol--footer-coluna-links {
     display: flex;
@@ -75,8 +66,12 @@
 }
 
 //Retira estilo width do stretchChildrenWidth 
-.flexRow--main-footer-mobile {
-    :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
-        width: auto !important;
-    }
+// .flexRow--main-footer-mobile {
+//     :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+//         width: auto !important;
+//     }
+// }
+
+.flexRow-items-stretch {
+    border-radius: 1000px;
 }
