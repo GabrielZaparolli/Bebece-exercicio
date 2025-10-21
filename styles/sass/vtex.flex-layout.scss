@@ -1,4 +1,6 @@
-.flexRow--main-header-mobile{
+
+
+.flexRow--main-header-mobile {
     width: 100%;
 }
 
@@ -22,20 +24,21 @@
     padding: 0;
 }
 
-.flexRow--flexCol--main-footer-mobile{
+.flexRow--flexCol--main-footer-mobile {
     background-color: #B11B26;
     padding: 20px 0 64px 0;
-    
+
     height: auto;
     margin: 0;
 }
-.flexCol--main-footer-mobile{
+
+.flexCol--main-footer-mobile {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 64px;
-    
-    
+
+
 }
 
 .flexRowContent--footer-logo {
@@ -65,13 +68,28 @@
     }
 }
 
-//Retira estilo width do stretchChildrenWidth 
-// .flexRow--main-footer-mobile {
-//     :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
-//         width: auto !important;
-//     }
-// }
-
 .flexRow-items-stretch {
     border-radius: 1000px;
+}
+
+.flexCol--banner-button-container {
+    height: 100%;
+    padding-bottom: 2rem;
+    
+}
+
+.flexColChild--banner-button-container {
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 12px 24px;
+    margin-left: 10px;
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px); 
+}
+
+.flexCol--container-categorias{
+    padding: 32px 16px 48px 16px;
+    display: flex;
+    gap: 16px;
 }

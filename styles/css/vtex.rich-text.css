@@ -7,3 +7,9 @@
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
 }
+
+.paragraph--titulo-categorias {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  font-size: 16px;
+}

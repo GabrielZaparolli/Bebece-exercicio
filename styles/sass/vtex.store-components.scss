@@ -63,15 +63,33 @@
 }
 
 
-.portalWrapper--searchBarContainer {
-    position: relative;
-    margin-top: 5px;
-    width: 100%;
+@media (max-width: 640px) {
+    .searchResultLayoutContainer {
+        position: fixed !important;
+        left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        top: 90px !important;
+        height: calc(100vh - 90px) !important;
+        background-color: #ffffff;
+        margin-top: 5px;
+    }
+    .resultslist--searchBarContainer {
+        width: 100% !important;
+        min-width: 100% !important;
 
+    }
+
+    .portalWrapper--searchBarContainer {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        margin-top: 5px;
+        position: relative;
+    }
 }
 
-
-.resultsList--searchBarContainer {
-    width: 100%;
-
+.imageElement--banners-categorias {
+    border-radius: 4px;
 }
