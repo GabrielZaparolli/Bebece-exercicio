@@ -21,8 +21,6 @@
     "vtex.store-link": "0.x",
     "vtex.disclosure-layout": "1.x",
     "vtex.styleguide": "9.x",
-    "vtex.slider": "0.x",
-    "vtex.carousel": "2.x",
     "vtex.shelf": "1.x",
     "vtex.menu": "2.x",
     "vtex.store-icons": "0.x",
@@ -50,7 +48,8 @@
     "vtex.iframe": "0.x",
     "vtex.breadcrumb": "1.x",
     "vtex.sticky-layout": "0.x",
-    "vtex.add-to-cart-button": "0.x"
+    "vtex.add-to-cart-button": "0.x",
+    "vtex.store-image": "0.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
