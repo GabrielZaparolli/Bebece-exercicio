@@ -5,15 +5,176 @@
             "flex-layout.row#home-mobile"
         ]
     },
-     "flex-layout.row#home-mobile": {
-        "children": [],
+
+    "flex-layout.row#home-mobile": {
+        "children": [
+            "flex-layout.col#home-mobile-col"
+        ],
         "props": {
             "blockClass": "main-home-mobile",
             "preventHorizontalStretch": true,
             "preserveLayoutOnMobile": true,
             "fullWidth": true
         }
+    },
+    "flex-layout.col#home-mobile-col": {
+        "children": [
+            "stack-layout#main-banner-stack",
+            "flex-layout.col#main-categorias-banner"
+        ]
+    },
+    
+    "flex-layout.col#main-categorias-banner": {
+        "children": [
+            "rich-text#categorias-banner",
+            "slider-layout#images-categorias"
+        ],
+        "props": {
+            "blockClass": "container-categorias"
+        }
+    },
+    "rich-text#categorias-banner": {
+        "props": {
+            "text": "Categorias",
+            "blockClass": "titulo-categorias"
+        }
+    },
+
+    //categorias banners
+    "slider-layout#images-categorias": {
+        "title": "Banners Categorias",
+        "props": {
+            "itemsPerPage":{
+                "phone": 2.5
+            },
+            "infinite": false,
+            "showPaginationDots": "never",
+            "showNavigationArrows": "never",
+            "usePagination": false,
+            "blockClass": "banners-categorias"
+        },
+        "children": [
+            "image#banner-categorias1",
+            "image#banner-categorias2",
+            "image#banner-categorias3",
+            "image#banner-categorias4"
+        ]
+    },
+
+    "image#banner-categorias1": {
+        "props": {
+            "src": "assets/images/bannerCategorias/banner-botas.jpg",
+            "alt": "Banner Categorias Botas",
+            "link": { "url": "/" },
+            
+            "blockClass": "banners-categorias"
+        }
+    },
+    "image#banner-categorias2": {
+        "props": {
+            "src": "assets/images/bannerCategorias/banner-scarpins.jpg",
+            "alt": "Banner Categorias Botas",
+            "link": { "url": "/" },
+            
+            "blockClass": "banners-categorias"
+        }
+    },
+    "image#banner-categorias3": {
+        "props": {
+            "src": "assets/images/bannerCategorias/banner-sapatilhas.jpg",
+            "alt": "Banner Categorias Botas",
+            "link": { "url": "/" },
+            
+            "blockClass": "banners-categorias"
+        }
+    },
+    "image#banner-categorias4": {
+        "props": {
+            "src": "assets/images/bannerCategorias/banner-sandalias.jpg",
+            "alt": "Banner Categorias Botas",
+            "link": { "url": "/" },
+            "blockClass": "banners-categorias"
+        }
+    },
+
+    //main banner
+    "stack-layout#main-banner-stack": {
+        "children": [
+            "slider-layout#images-banner",
+            "flex-layout.col#banner-button-container"
+        ]
+    },
+
+    //container btn
+    "flex-layout.col#banner-button-container": {
+        "children": [
+            "link#banner-button"
+        ],
+        "props": {
         
+            "verticalAlign": "bottom", 
+            "horizontalAlign": "center", 
+            "blockClass": "banner-button-container"
+        }
+    },
+
+    //botao
+    "link#banner-button": {
+        "props": {
+            "href": "/",
+            "label": "Conheça agora!",
+            "blockClass": "banner-button"
+        }
+    },
+    
+    //slider
+    "slider-layout#images-banner": {
+        "props": {
+            "itemsPerPage": {
+                "phone": 1
+            },
+            "infinite": true,
+            "blockClass": "carousel-imagens-banner",
+            "showPaginationDots": "mobileOnly",
+            "showNavigationArrows": "never",
+            "autoplay": {
+                "timeout": 3000,
+                "stopOnHover": true
+            }
+        },
+        "children": [
+            "image#banner1",
+            "image#banner2",
+            "image#banner3"
+        ]
+    },
+
+
+    "image#banner1": {
+        "props": {
+            "src": "assets/images/bannerPrincipal1.jpg",
+            "alt": "Banner Principal 1",
+            "link": { "url": "/" },
+            "maxWidth": "100%",
+            "blockClass": "banner-mobile"
+        }
+    },
+    "image#banner2": {
+        "props": {
+            "src": "assets/images/bannerPrincipal2.jpg",
+            "alt": "Banner Principal 2",
+            "link": { "url": "/" },
+            "maxWidth": "100%",
+            "blockClass": "banner-mobile"
+        }
+    },
+    "image#banner3": {
+        "props": {
+            "src": "assets/images/bannerPrincipal3.jpg",
+            "alt": "Banner Principal 3",
+            "link": { "url": "/" },
+            "maxWidth": "100%",
+            "blockClass": "banner-mobile"
+        }
     }
 }
-    
