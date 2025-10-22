@@ -86,7 +86,7 @@
             "flex-layout.col#categoria-4"
         ]
     },
-
+    
     // Categoria 1 - Botas
     "flex-layout.col#categoria-1": {
         "children": [
