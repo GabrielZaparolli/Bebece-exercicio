@@ -26,14 +26,16 @@
   gap: 12px;
 }
 
-.sliderLayoutContainer--banners-categorias {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+.sliderTrackContainer--banners-categorias {
+  overflow-x: scroll !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
 }
 
-.sliderLayoutContainer--banners-categorias::-webkit-scrollbar {
-  /* Esconde a barra de rolagem no Chrome, Safari e na maioria dos browsers mobile (Webkit) */
-  display: none;
+.sliderTrackContainer--banners-categorias::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .vtex-slider-layout-0-x-sliderTrack--banners-categorias {

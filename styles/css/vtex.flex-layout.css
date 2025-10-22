@@ -84,3 +84,11 @@
   display: flex;
   gap: 16px;
 }
+
+.flexCol--container-bannersNav {
+  display: flex;
+  gap: 6px;
+}
+.flexCol--container-bannersNav .flexColChild--container-bannersNav {
+  line-height: 0;
+}

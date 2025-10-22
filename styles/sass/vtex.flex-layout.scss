@@ -1,5 +1,3 @@
-
-
 .flexRow--main-header-mobile {
     width: 100%;
 }
@@ -75,7 +73,7 @@
 .flexCol--banner-button-container {
     height: 100%;
     padding-bottom: 2rem;
-    
+
 }
 
 .flexColChild--banner-button-container {
@@ -84,12 +82,21 @@
     color: #fff;
     padding: 12px 24px;
     margin-left: 10px;
-    backdrop-filter: blur(8px); 
-    -webkit-backdrop-filter: blur(8px); 
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
-.flexCol--container-categorias{
+.flexCol--container-categorias {
     padding: 32px 16px 48px 16px;
     display: flex;
     gap: 16px;
+}
+
+.flexCol--container-bannersNav {
+    display: flex;
+    gap: 6px;
+
+    .flexColChild--container-bannersNav {
+        line-height: 0;
+    }
 }

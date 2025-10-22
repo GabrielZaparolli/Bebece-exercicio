@@ -1,6 +1,6 @@
 @use '../sass/padroes/fonts.scss' as vars;
 
-.paragraph--footer-titulo-coluna{
+.paragraph--footer-titulo-coluna {
     padding: 0;
     margin: 0;
     color: #ffffff;
@@ -9,8 +9,16 @@
     font-family: vars.$fontFamilyOpen;
 }
 
-.paragraph--titulo-categorias{
+.paragraph--titulo-categorias {
     font-family: vars.$fontFamilyOpen;
     margin: 0;
     font-size: 16px;
+}
+
+.paragraph--nome-categoria {
+    font-family: vars.$fontFamilyOpen;
+    font-size: 14px;
+    color: #1D1D1D;
+    font-weight: 300;
+    margin: 0;
 }
