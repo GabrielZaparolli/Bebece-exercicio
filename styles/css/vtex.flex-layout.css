@@ -92,3 +92,17 @@
 .flexCol--container-bannersNav .flexColChild--container-bannersNav {
   line-height: 0;
 }
+
+.flexCol--container-prateleira,
+.flexCol--container-conhecaMais {
+  padding: 32px 16px 48px 16px;
+}
+
+.flexCol--container-titSubt-conhecaMais {
+  display: flex;
+  gap: 4px;
+}
+
+.flexCol--container-conhecaMais {
+  background-color: #F7F7F7;
+}

@@ -8,10 +8,13 @@
   font-family: "Open Sans", sans-serif;
 }
 
-.paragraph--titulo-categorias {
+.paragraph--titulo-categorias,
+.paragraph--titulo-prateleira,
+.paragraph--titulo-conhecaMais {
   font-family: "Open Sans", sans-serif;
   margin: 0;
   font-size: 16px;
+  font-weight: 400;
 }
 
 .paragraph--nome-categoria {
@@ -20,4 +23,13 @@
   color: #1D1D1D;
   font-weight: 300;
   margin: 0;
+}
+
+.paragraph--subtitulo-conhecaMais {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  margin: 0;
+  color: #8A8A8A;
+  font-size: 12px;
 }
