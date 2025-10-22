@@ -1,0 +1,35 @@
+/* Coloque este código no seu arquivo
+   styles/css/vtex.product-summary.scss */
+
+.wishlistIconContainer--wishlist-shelf {
+
+    /* 1. Seleciona O BOTÃO (o <button>) */
+    :global(.vtex-button) {
+        
+        /* 2. Dê um tamanho ao botão e o mantenha VISÍVEL */
+        /* NÃO PODE TER 'display: none' AQUI */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 12px;  /* Tamanho do seu novo ícone */
+        height: 12px; /* Tamanho do seu novo ícone */
+        
+        /* Remove qualquer padding que o botão possa ter */
+        padding: 0; 
+        
+        /* 3. Adiciona seu ícone customizado AO BOTÃO */
+        &::after {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.74889 0C8.18609 0.0088001 7.63557 0.166734 7.15292 0.457854C6.67026 0.748973 6.27257 1.16297 6 1.65803C5.72743 1.16297 5.32974 0.748973 4.84708 0.457854C4.36443 0.166734 3.81391 0.0088001 3.25111 0C2.35394 0.0391852 1.50866 0.433728 0.899949 1.09743C0.291233 1.76114 -0.031442 2.64005 0.00241958 3.54216C0.00241958 6.94615 5.47821 10.8777 5.71112 11.0445L6 11.25L6.28888 11.0445C6.52179 10.8787 11.9976 6.94615 11.9976 3.54216C12.0314 2.64005 11.7088 1.76114 11.1001 1.09743C10.4913 0.433728 9.64606 0.0391852 8.74889 0ZM6 10.013C4.37416 8.79209 1.00202 5.79256 1.00202 3.54216C0.96785 2.90644 1.18513 2.28292 1.60645 1.80761C2.02778 1.33229 2.61898 1.04373 3.25111 1.00487C3.88324 1.04373 4.47444 1.33229 4.89576 1.80761C5.31709 2.28292 5.53437 2.90644 5.5002 3.54216H6.4998C6.46563 2.90644 6.68291 2.28292 7.10424 1.80761C7.52556 1.33229 8.11676 1.04373 8.74889 1.00487C9.38102 1.04373 9.97222 1.33229 10.3935 1.80761C10.8149 2.28292 11.0322 2.90644 10.998 3.54216C10.998 5.79357 7.62584 8.79209 6 10.013Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+        }
+    }
+
+    /* 4. Esconda o CONTEÚDO ORIGINAL do botão (o <span> com o coração) */
+    :global(.vtex-button__label) {
+        display: none;
+    }
+}
