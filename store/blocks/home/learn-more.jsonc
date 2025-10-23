@@ -42,20 +42,16 @@
             "infinite": true,
             "showNavigationArrows": "never",
             "showPaginationDots": "always",
-            // "autoplay": {
-            //     "timeout": 3000,
-            //     "stopOnHover": true
-            // },
             "blockClass": "slider-banners-institucional"
         },
         "children": [
-            "flex-layout.col#banner-inst-1",
-            "flex-layout.col#banner-inst-2",
-            "flex-layout.col#banner-inst-3"
+            "flex-layout.row#banner-inst-1",
+            "flex-layout.row#banner-inst-2",
+            "flex-layout.row#banner-inst-3"
         ]
     },
     // Banner 1
-    "flex-layout.col#banner-inst-1": {
+    "flex-layout.row#banner-inst-1": {
         "title": "Banner institucional 1",
         "children": [
             "image#banner-inst-bg-1",
@@ -70,8 +66,7 @@
         "props": {
             "src": "assets/images/bannerInstitucional/banner-institu1.jpg",
             "alt": "Banner institucional Bebecê",
-            "blockClass": "banner-inst-bg",
-            "maxWidth": "100%"
+            "blockClass": "banner-inst-bg"
         }
     },
     "flex-layout.col#banner-inst-content-1": {
@@ -111,7 +106,7 @@
         }
     },
     // Banner 2 institucional
-    "flex-layout.col#banner-inst-2": {
+    "flex-layout.row#banner-inst-2": {
         "title": "Banner institucional 2",
         "children": [
             "image#banner-inst-bg-2",
@@ -126,8 +121,7 @@
         "props": {
             "src": "assets/images/bannerInstitucional/banner-institu2.jpg",
             "alt": "Banner institucional 2",
-            "blockClass": "banner-inst-bg",
-            "maxWidth": "100%"
+            "blockClass": "banner-inst-bg"
         }
     },
     "flex-layout.col#banner-inst-content-2": {
@@ -166,7 +160,8 @@
             "blockClass": "banner-inst-btn"
         }
     },
-    "flex-layout.col#banner-inst-3": {
+    // Banner 3
+    "flex-layout.row#banner-inst-3": {
         "title": "Banner institucional 3",
         "children": [
             "image#banner-inst-bg-3",
@@ -181,8 +176,7 @@
         "props": {
             "src": "assets/images/bannerInstitucional/banner-institu3.jpg",
             "alt": "Banner institucional 3",
-            "blockClass": "banner-inst-bg",
-            "maxWidth": "100%"
+            "blockClass": "banner-inst-bg"
         }
     },
     "flex-layout.col#banner-inst-content-3": {

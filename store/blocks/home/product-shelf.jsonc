@@ -1,5 +1,5 @@
 {
-     "flex-layout.col#prateleira-produtos": {
+    "flex-layout.col#prateleira-produtos": {
         "title": "Prateleira de Produtos",
         "children": [
             "rich-text#prateleira-produtos",
@@ -56,12 +56,16 @@
         "children": [
             "product-summary-image",
             "flex-layout.row#buttons-produtos"
-        ]
+        ],
+        "props": {
+            "blockClass": "container-stack-btns"
+        }
     },
     "flex-layout.row#buttons-produtos": {
         "children": [
-            "add-to-list-btn",
-            "add-to-cart-button#bag"
+            "flex-layout.row#wish-list-btn",
+            "flex-layout.row#add-to-cart-btn"
+            
         ],
         "props": {
             "blockClass": "container-btns-produtos",
@@ -69,9 +73,26 @@
             "verticalAlign": "bottom"
         }
     },
-    "add-to-list-btn": {
+    "flex-layout.row#wish-list-btn": {
+        "children": [
+            "add-to-list-btn#wish-list"
+        ],
         "props": {
             "blockClass": "btn-wishList"
+        }
+
+    },
+    "add-to-list-btn#wish-list": {
+        "props": {
+            "blockClass": "btn-wishList"
+        }
+    },
+    "flex-layout.row#add-to-cart-btn": {
+        "children": [
+            "add-to-cart-button#bag"
+        ],
+        "props": {
+            "blockClass": "btn-sacola"
         }
     },
     "add-to-cart-button#bag": {
@@ -79,8 +100,8 @@
             "text": "",
             "isOneClickBuy": false,
             "customToastUrl": "/checkout",
-            "blockClass": "btn-sacola-shelf"
+            "blockClass": "btn-sacola-shelf",
+            "addToCartFeedback": "toast"
         }
     }
-    
 }

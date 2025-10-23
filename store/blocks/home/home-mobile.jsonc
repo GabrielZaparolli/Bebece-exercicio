@@ -12,8 +12,8 @@
         "props": {
             "blockClass": "main-home-mobile",
             "preventHorizontalStretch": true,
-            "preserveLayoutOnMobile": true,
-            "fullWidth": true
+            "preserveLayoutOnMobile": false,
+            "fullWidth": false
         }
     },
     "flex-layout.col#home-mobile-col": {
