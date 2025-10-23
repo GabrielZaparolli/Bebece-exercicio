@@ -1,0 +1,81 @@
+{
+     "flex-layout.col#prateleira-produtos": {
+        "children": [
+            "rich-text#prateleira-produtos",
+            "list-context.product-list#lancamentos"
+        ],
+        "props": {
+            "blockClass": "container-prateleira"
+        }
+    },
+    "rich-text#prateleira-produtos": {
+        "props": {
+            "text": "Lançamentos",
+            "blockClass": "titulo-prateleira"
+        }
+    },
+    "list-context.product-list#lancamentos": {
+        "props": {
+            "collection": "156",
+            "maxItems": 6
+        },
+        "blocks": [
+            "product-summary.shelf"
+        ],
+        "children": [
+            "slider-layout#prateleira-lancamentos"
+        ]
+    },
+    "slider-layout#prateleira-lancamentos": {
+        "props": {
+            "itemsPerPage": {
+                "phone": 1.5
+            },
+            "showNavigationArrows": "never",
+            "showPaginationDots": "never",
+            "infinite": false,
+            "blockClass": "slider-prateleira"
+        }
+    },
+    "product-summary.shelf": {
+        "children": [
+            "stack-layout#btns-produtos",
+            "product-summary-name",
+            "product-summary-space",
+            "product-summary-price"
+        ],
+        "props": {
+            "blockClass": "prateleira-produtos"
+        }
+    },
+    "stack-layout#btns-produtos": {
+        "children": [
+            "product-summary-image",
+            "flex-layout.row#buttons-produtos"
+        ]
+    },
+    "flex-layout.row#buttons-produtos": {
+        "children": [
+            "add-to-list-btn",
+            "add-to-cart-button#bag"
+        ],
+        "props": {
+            "blockClass": "container-btns-produtos",
+            "horizontalAlign": "right",
+            "verticalAlign": "bottom"
+        }
+    },
+    "add-to-list-btn": {
+        "props": {
+            "blockClass": "btn-wishList"
+        }
+    },
+    "add-to-cart-button#bag": {
+        "props": {
+            "text": "",
+            "isOneClickBuy": false,
+            "customToastUrl": "/checkout",
+            "blockClass": "btn-sacola-shelf"
+        }
+    }
+}
