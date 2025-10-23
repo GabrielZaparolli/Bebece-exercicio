@@ -1,0 +1,201 @@
+{
+    "flex-layout.col#conheca-mais": {
+        "children": [
+            "flex-layout.col#tit-subt-conhecaMais",
+            "slider-layout#banners-institucional"
+        ],
+        "props": {
+            "blockClass": "container-conhecaMais"
+        }
+    },
+    "flex-layout.col#tit-subt-conhecaMais": {
+        "children": [
+            "rich-text#titulo-conheca",
+            "rich-text#subtitulo-conheca"
+        ],
+        "props": {
+            "blockClass": "container-titSubt-conhecaMais"
+        }
+    },
+    "rich-text#titulo-conheca": {
+        "props": {
+            "text": "Conheça mais",
+            "blockClass": "titulo-conhecaMais"
+        }
+    },
+    "rich-text#subtitulo-conheca": {
+        "props": {
+            "text": "Fique por dentro de tudo que acontece na Bebecê.",
+            "blockClass": "subtitulo-conhecaMais"
+        }
+    },
+    "slider-layout#banners-institucional": {
+        "props": {
+            "itemsPerPage": {
+                "phone": 1
+            },
+            "infinite": true,
+            "showNavigationArrows": "never",
+            "showPaginationDots": "always",
+            // "autoplay": {
+            //     "timeout": 3000,
+            //     "stopOnHover": true
+            // },
+            "blockClass": "slider-banners-institucional"
+        },
+        "children": [
+            "flex-layout.col#banner-inst-1",
+            "flex-layout.col#banner-inst-2",
+            "flex-layout.col#banner-inst-3"
+        ]
+    },
+    // Banner 1
+    "flex-layout.col#banner-inst-1": {
+        "children": [
+            "image#banner-inst-bg-1",
+            "flex-layout.col#banner-inst-content-1"
+        ],
+        "props": {
+            "blockClass": "container-banner-inst"
+        }
+    },
+    "image#banner-inst-bg-1": {
+        "props": {
+            "src": "assets/images/bannerInstitucional/banner-institu1.jpg",
+            "alt": "Banner institucional Bebecê",
+            "blockClass": "banner-inst-bg",
+            "maxWidth": "100%"
+        }
+    },
+    "flex-layout.col#banner-inst-content-1": {
+        "children": [
+            "rich-text#banner-inst-title-1",
+            "rich-text#banner-inst-text-1",
+            "link#banner-inst-btn-1"
+        ],
+        "props": {
+            "blockClass": "banner-inst-content",
+            "verticalAlign": "bottom",
+            "horizontalAlign": "left",
+            "preventVerticalStretch": true
+        }
+    },
+    "rich-text#banner-inst-title-1": {
+        "props": {
+            "text": "NOVO LOGO, MESMA ESSÊNCIA.",
+            "blockClass": "banner-inst-title"
+        }
+    },
+    "rich-text#banner-inst-text-1": {
+        "props": {
+            "text": "Trazendo conforto através das linhas finas e grossas + uma paleta de cores vibrante e cheia de atitude, o resultado é um visual que traduz nossa essência: autêntica e surpreendente!",
+            "blockClass": "banner-inst-text"
+        }
+    },
+    "link#banner-inst-btn-1": {
+        "props": {
+            "href": "/",
+            "label": "Saiba mais!",
+            "blockClass": "banner-inst-btn"
+        }
+    },
+    // Banner 2 institucional
+    "flex-layout.col#banner-inst-2": {
+        "children": [
+            "image#banner-inst-bg-2",
+            "flex-layout.col#banner-inst-content-2"
+        ],
+        "props": {
+            "blockClass": "container-banner-inst"
+        }
+    },
+    "image#banner-inst-bg-2": {
+        "props": {
+            "src": "assets/images/bannerInstitucional/banner-institu2.jpg",
+            "alt": "Banner institucional 2",
+            "blockClass": "banner-inst-bg",
+            "maxWidth": "100%"
+        }
+    },
+    "flex-layout.col#banner-inst-content-2": {
+        "children": [
+            "rich-text#banner-inst-title-2",
+            "rich-text#banner-inst-text-2",
+            "link#banner-inst-btn-2"
+        ],
+        "props": {
+            "blockClass": "banner-inst-content",
+            "verticalAlign": "bottom",
+            "horizontalAlign": "left",
+            "preventVerticalStretch": true
+        }
+    },
+    "rich-text#banner-inst-title-2": {
+        "props": {
+            "text": "É AMANHÃ",
+            "blockClass": "banner-inst-title"
+        }
+    },
+    "rich-text#banner-inst-text-2": {
+        "props": {
+            "text": "SIMPLE and TRUE: lançamento da nova coleção Outono Inverno 2024 da Bebecê ❤️",
+            "blockClass": "banner-inst-text"
+        }
+    },
+    "link#banner-inst-btn-2": {
+        "props": {
+            "href": "/",
+            "label": "Saiba mais!",
+            "blockClass": "banner-inst-btn"
+        }
+    },
+    "flex-layout.col#banner-inst-3": {
+        "children": [
+            "image#banner-inst-bg-3",
+            "flex-layout.col#banner-inst-content-3"
+        ],
+        "props": {
+            "blockClass": "container-banner-inst"
+        }
+    },
+    "image#banner-inst-bg-3": {
+        "props": {
+            "src": "assets/images/bannerInstitucional/banner-institu3.jpg",
+            "alt": "Banner institucional 3",
+            "blockClass": "banner-inst-bg",
+            "maxWidth": "100%"
+        }
+    },
+    "flex-layout.col#banner-inst-content-3": {
+        "children": [
+            "rich-text#banner-inst-title-3",
+            "rich-text#banner-inst-text-3",
+            "link#banner-inst-btn-3"
+        ],
+        "props": {
+            "blockClass": "banner-inst-content",
+            "verticalAlign": "bottom",
+            "horizontalAlign": "left",
+            "preventVerticalStretch": true
+        }
+    },
+    "rich-text#banner-inst-title-3": {
+        "props": {
+            "text": "DESCUBRA O GLAMOUR EM CADA PASSO.",
+            "blockClass": "banner-inst-title"
+        }
+    },
+    "rich-text#banner-inst-text-3": {
+        "props": {
+            "text": "Quer brilhar ainda mais neste inverno sem abrir mão do conforto? Esta mule é perfeita para você. ✨",
+            "blockClass": "banner-inst-text"
+        }
+    },
+    "link#banner-inst-btn-3": {
+        "props": {
+            "href": "/",
+            "label": "Saiba mais!",
+            "blockClass": "banner-inst-btn"
+        }
+    }
+}
