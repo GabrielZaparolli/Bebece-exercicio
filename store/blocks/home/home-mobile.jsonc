@@ -27,6 +27,7 @@
     },
     //main banner header
     "stack-layout#main-banner-stack": {
+        "title": "Banner principal topo",
         "children": [
             "slider-layout#images-banner",
             "flex-layout.col#banner-button-container"
@@ -45,6 +46,7 @@
     },
     //botao
     "link#banner-button": {
+        "title": "Botao banner principal",
         "props": {
             "href": "/",
             "label": "Conheça agora!",
@@ -53,6 +55,7 @@
     },
     //slider
     "slider-layout#images-banner": {
+        "title": "Carrossel de banners principal",
         "props": {
             "itemsPerPage": {
                 "phone": 1
@@ -73,6 +76,7 @@
         ]
     },
     "image#banner1": {
+        "title": "Banner principal 1",
         "props": {
             "src": "assets/images/bannerPrincipal1.jpg",
             "alt": "Banner Principal 1",
@@ -84,6 +88,7 @@
         }
     },
     "image#banner2": {
+        "title": "Banner principal 2 ",
         "props": {
             "src": "assets/images/bannerPrincipal2.jpg",
             "alt": "Banner Principal 2",
@@ -95,6 +100,7 @@
         }
     },
     "image#banner3": {
+        "title": "Banner principal 3",
         "props": {
             "src": "assets/images/bannerPrincipal3.jpg",
             "alt": "Banner Principal 3",
@@ -107,6 +113,7 @@
     },
         //banners nav
     "flex-layout.col#banners-navegacao": {
+        "title": "Banners navegação",
         "children": [
             "image#banner-nav1",
             "image#banner-nav2"
@@ -116,6 +123,7 @@
         }
     },
     "image#banner-nav1": {
+        "title": "Banner navegação 1",
         "props": {
             "src": "assets/images/bannerNavegacao/bannerNav-pequeno.jpg",
             "alt": "Banner navegacao 1",
@@ -123,6 +131,7 @@
         }
     },
     "image#banner-nav2": {
+        "title": "Banner navegação 2",
         "props": {
             "src": "assets/images/bannerNavegacao/bannerNav-grande.jpg",
             "alt": "Banner navegacao 2",

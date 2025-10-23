@@ -1,5 +1,6 @@
 {
     "flex-layout.col#conheca-mais": {
+        "title": "Conheça mais",
         "children": [
             "flex-layout.col#tit-subt-conhecaMais",
             "slider-layout#banners-institucional"
@@ -9,6 +10,7 @@
         }
     },
     "flex-layout.col#tit-subt-conhecaMais": {
+        "title": "Titulo e subtitulo conheca mais",
         "children": [
             "rich-text#titulo-conheca",
             "rich-text#subtitulo-conheca"
@@ -18,18 +20,21 @@
         }
     },
     "rich-text#titulo-conheca": {
+        "title": "Titulo conheca mais",
         "props": {
             "text": "Conheça mais",
             "blockClass": "titulo-conhecaMais"
         }
     },
     "rich-text#subtitulo-conheca": {
+        "title": "Subtitulo conheca mais",
         "props": {
             "text": "Fique por dentro de tudo que acontece na Bebecê.",
             "blockClass": "subtitulo-conhecaMais"
         }
     },
     "slider-layout#banners-institucional": {
+        "title": "Carrossel de banners institucionais",
         "props": {
             "itemsPerPage": {
                 "phone": 1
@@ -51,6 +56,7 @@
     },
     // Banner 1
     "flex-layout.col#banner-inst-1": {
+        "title": "Banner institucional 1",
         "children": [
             "image#banner-inst-bg-1",
             "flex-layout.col#banner-inst-content-1"
@@ -60,6 +66,7 @@
         }
     },
     "image#banner-inst-bg-1": {
+        "title": "Imagem banner institucional 1",
         "props": {
             "src": "assets/images/bannerInstitucional/banner-institu1.jpg",
             "alt": "Banner institucional Bebecê",
@@ -68,6 +75,7 @@
         }
     },
     "flex-layout.col#banner-inst-content-1": {
+        "title": "Descrição banner instucional 1",
         "children": [
             "rich-text#banner-inst-title-1",
             "rich-text#banner-inst-text-1",
@@ -81,18 +89,21 @@
         }
     },
     "rich-text#banner-inst-title-1": {
+        "title": "Titulo banner institucional 1",
         "props": {
             "text": "NOVO LOGO, MESMA ESSÊNCIA.",
             "blockClass": "banner-inst-title"
         }
     },
     "rich-text#banner-inst-text-1": {
+        "title": "Descrição banner institucional 1",
         "props": {
             "text": "Trazendo conforto através das linhas finas e grossas + uma paleta de cores vibrante e cheia de atitude, o resultado é um visual que traduz nossa essência: autêntica e surpreendente!",
             "blockClass": "banner-inst-text"
         }
     },
     "link#banner-inst-btn-1": {
+        "title": "Link banner institucional 1",
         "props": {
             "href": "/",
             "label": "Saiba mais!",
@@ -101,6 +112,7 @@
     },
     // Banner 2 institucional
     "flex-layout.col#banner-inst-2": {
+        "title": "Banner institucional 2",
         "children": [
             "image#banner-inst-bg-2",
             "flex-layout.col#banner-inst-content-2"
@@ -110,6 +122,7 @@
         }
     },
     "image#banner-inst-bg-2": {
+        "title": "Imagem banner institucional 2",
         "props": {
             "src": "assets/images/bannerInstitucional/banner-institu2.jpg",
             "alt": "Banner institucional 2",
@@ -118,6 +131,7 @@
         }
     },
     "flex-layout.col#banner-inst-content-2": {
+        "title": "Descrição banner institucional 2",
         "children": [
             "rich-text#banner-inst-title-2",
             "rich-text#banner-inst-text-2",
@@ -131,18 +145,21 @@
         }
     },
     "rich-text#banner-inst-title-2": {
+        "title": "Titulo banner institucional 2",
         "props": {
             "text": "É AMANHÃ",
             "blockClass": "banner-inst-title"
         }
     },
     "rich-text#banner-inst-text-2": {
+        "title": "Descrição banner institucional 2",
         "props": {
             "text": "SIMPLE and TRUE: lançamento da nova coleção Outono Inverno 2024 da Bebecê ❤️",
             "blockClass": "banner-inst-text"
         }
     },
     "link#banner-inst-btn-2": {
+        "title": "Link banner institucional 2",
         "props": {
             "href": "/",
             "label": "Saiba mais!",
@@ -150,6 +167,7 @@
         }
     },
     "flex-layout.col#banner-inst-3": {
+        "title": "Banner institucional 3",
         "children": [
             "image#banner-inst-bg-3",
             "flex-layout.col#banner-inst-content-3"
@@ -159,6 +177,7 @@
         }
     },
     "image#banner-inst-bg-3": {
+        "title": "Imagem banner institucional 3",
         "props": {
             "src": "assets/images/bannerInstitucional/banner-institu3.jpg",
             "alt": "Banner institucional 3",
@@ -167,6 +186,7 @@
         }
     },
     "flex-layout.col#banner-inst-content-3": {
+        "title": "Descrição banner institucional 3",
         "children": [
             "rich-text#banner-inst-title-3",
             "rich-text#banner-inst-text-3",
@@ -180,18 +200,21 @@
         }
     },
     "rich-text#banner-inst-title-3": {
+        "title": "Titulo banner institucional 3",
         "props": {
             "text": "DESCUBRA O GLAMOUR EM CADA PASSO.",
             "blockClass": "banner-inst-title"
         }
     },
     "rich-text#banner-inst-text-3": {
+        "title": "Descrição banner institucional 3",
         "props": {
             "text": "Quer brilhar ainda mais neste inverno sem abrir mão do conforto? Esta mule é perfeita para você. ✨",
             "blockClass": "banner-inst-text"
         }
     },
     "link#banner-inst-btn-3": {
+        "title": "Link banner institucional 3",
         "props": {
             "href": "/",
             "label": "Saiba mais!",

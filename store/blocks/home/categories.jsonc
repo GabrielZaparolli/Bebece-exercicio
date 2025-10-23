@@ -1,5 +1,6 @@
 {
     "flex-layout.col#main-categorias-banner": {
+        "title": "Categorias",
         "children": [
             "rich-text#categorias-banner",
             "slider-layout#images-categorias"
@@ -9,6 +10,7 @@
         }
     },
     "rich-text#categorias-banner": {
+        "title": "Titulo categorias",
         "props": {
             "text": "Categorias",
             "blockClass": "titulo-categorias"
@@ -45,6 +47,7 @@
         }
     },
     "image#banner-categorias1": {
+        "title": "Banners Categorias 1",
         "props": {
             "src": "assets/images/bannerCategorias/banner-botas.jpg",
             "alt": "Banner Categorias Botas",
@@ -55,6 +58,7 @@
         }
     },
     "rich-text#nome-categoria-1": {
+        "title": "Nome categoria 1",
         "props": {
             "text": "Botas",
             "textAlignment": "CENTER",
@@ -72,6 +76,7 @@
         }
     },
     "image#banner-categorias2": {
+        "title": "Banners Categorias 2",
         "props": {
             "src": "assets/images/bannerCategorias/banner-scarpins.jpg",
             "alt": "Banner Categorias Scarpins",
@@ -82,6 +87,7 @@
         }
     },
     "rich-text#nome-categoria-2": {
+        "title": "Nome categoria 2",
         "props": {
             "text": "Scarpins",
             "textAlignment": "CENTER",
@@ -99,6 +105,7 @@
         }
     },
     "image#banner-categorias3": {
+        "title": "Banners Categorias 3",
         "props": {
             "src": "assets/images/bannerCategorias/banner-sapatilhas.jpg",
             "alt": "Banner Categorias Sapatilhas",
@@ -109,6 +116,7 @@
         }
     },
     "rich-text#nome-categoria-3": {
+        "title": "Nome categoria 3",
         "props": {
             "text": "Sapatilhas",
             "textAlignment": "CENTER",
@@ -126,6 +134,7 @@
         }
     },
     "image#banner-categorias4": {
+        "title": "Banners Categorias 4",
         "props": {
             "src": "assets/images/bannerCategorias/banner-sandalias.jpg",
             "alt": "Banner Categorias Sandálias",
@@ -136,6 +145,7 @@
         }
     },
     "rich-text#nome-categoria-4": {
+        "title": "Nome categoria 4",
         "props": {
             "text": "Sandálias",
             "textAlignment": "CENTER",

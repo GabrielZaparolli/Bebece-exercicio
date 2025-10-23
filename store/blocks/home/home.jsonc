@@ -1,5 +1,6 @@
 {
     "store.home": {
+        "title": "Home Page",
         "blocks": [
             // "responsive-layout.desktop#home"
             "responsive-layout.mobile"

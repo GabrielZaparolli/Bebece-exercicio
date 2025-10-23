@@ -1,5 +1,6 @@
 {
      "flex-layout.col#prateleira-produtos": {
+        "title": "Prateleira de Produtos",
         "children": [
             "rich-text#prateleira-produtos",
             "list-context.product-list#lancamentos"
@@ -9,6 +10,7 @@
         }
     },
     "rich-text#prateleira-produtos": {
+        "title": "Titulo prateleira produtos",
         "props": {
             "text": "Lançamentos",
             "blockClass": "titulo-prateleira"
@@ -27,12 +29,14 @@
         ]
     },
     "slider-layout#prateleira-lancamentos": {
+        "title": "Carrossel de Produtos",
         "props": {
             "itemsPerPage": {
                 "phone": 1.5
             },
             "showNavigationArrows": "never",
             "showPaginationDots": "never",
+            "usePagination": false,
             "infinite": false,
             "blockClass": "slider-prateleira"
         }
@@ -78,4 +82,5 @@
             "blockClass": "btn-sacola-shelf"
         }
     }
+    
 }

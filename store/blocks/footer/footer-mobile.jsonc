@@ -25,6 +25,7 @@
         }
     },
     "flex-layout.row#footer-logo": {
+        "title": "Logo footer",
         "children": [
             "image#logo-footer"
         ],
@@ -33,7 +34,7 @@
         }
     },
     "image#logo-footer": {
-        "title": "logo footer",
+        "title": "Imagem logo footer",
         "props": {
             "src": "assets/svgs/logo-creme.svg",
             "blockClass": "footer-logo-img"
@@ -62,6 +63,7 @@
         }
     },
     "link#instagram-link": {
+        "title": "Rede social 1",
         "props": {
             "href": "/",
             "target": "_blank",
@@ -72,11 +74,13 @@
         ]
     },
     "image#instagram-icon": {
+        "title": "Icone rede social 1",
         "props": {
             "src": "assets/svgs/redesSociais/instagram.svg"
         }
     },
     "link#facebook-link": {
+        "title": "Rede social 2",
         "props": {
             "href": "/",
             "target": "_blank",
@@ -87,11 +91,13 @@
         ]
     },
     "image#facebook-icon": {
+        "title": "Icone rede social 2",
         "props": {
             "src": "assets/svgs/redesSociais/facebook.svg"
         }
     },
     "link#pinterest-link": {
+        "title": "Rede social 3",
         "props": {
             "href": "/",
             "target": "_blank",
@@ -102,11 +108,13 @@
         ]
     },
     "image#pinterest-icon": {
+        "title": "Icone rede social 3",
         "props": {
             "src": "assets/svgs/redesSociais/pinterest.svg"
         }
     },
     "link#twitter-link": {
+        "title": "Rede social 4",
         "props": {
             "href": "/",
             "target": "_blank",
@@ -117,11 +125,13 @@
         ]
     },
     "image#twitter-icon": {
+        "title": "Icone rede social 4",
         "props": {
             "src": "assets/svgs/redesSociais/twitter.svg"
         }
     },
     "link#tiktok-link": {
+        "title": "Rede social 5",
         "props": {
             "href": "/",
             "target": "_blank",
@@ -132,12 +142,14 @@
         ]
     },
     "image#tiktok-icon": {
+        "title": "Icone rede social 5",
         "props": {
             "src": "assets/svgs/redesSociais/tik-tok.svg"
         }
     },
     //links footer
     "flex-layout.col#footer-sobre-empresa": {
+        "title": "Sobre a empresa links",
         "children": [
             "rich-text#titulo-sobre-empresa",
             "menu#menu-sobre-empresa"
@@ -148,12 +160,14 @@
         }
     },
     "rich-text#titulo-sobre-empresa": {
+        "title": "Titulo sobre a empresa",
         "props": {
             "text": "Sobre a empresa",
             "blockClass": "footer-titulo-coluna"
         }
     },
     "menu#menu-sobre-empresa": {
+        "title" : "Menu de links sobre a empresa",
         "children": [
             "menu-item#link-quem-somos",
             "menu-item#link-fale-conosco"
@@ -164,6 +178,7 @@
         }
     },
     "menu-item#link-quem-somos": {
+        "title": "Link 1",
         "props": {
             "type": "custom",
             "href": "/",
@@ -172,6 +187,7 @@
         }
     },
     "menu-item#link-fale-conosco": {
+        "title": "Link 2",
         "props": {
             "type": "custom",
             "href": "/",
@@ -181,6 +197,7 @@
     },
     
     "flex-layout.col#footer-politicas": {
+        "title": "Políticas links",
         "children": [
             "rich-text#titulo-politicas",
             "menu#menu-politicas"
@@ -191,12 +208,14 @@
         }
     },
     "rich-text#titulo-politicas": {
+        "title": "Titulo políticas",
         "props": {
             "text": "Políticas",
             "blockClass": "footer-titulo-coluna" 
         }
     },
     "menu#menu-politicas": {
+        "title": "Menu de links políticas",
         "children": [
             "menu-item#link-politica-privacidade",
             "menu-item#link-termos-uso",
@@ -209,6 +228,7 @@
         }
     },
     "menu-item#link-politica-privacidade": {
+        "title": "Link 1",
         "props": {
             "type": "custom",
             "href": "/",
@@ -217,6 +237,7 @@
         }
     },
     "menu-item#link-termos-uso": {
+        "title": "Link 2",
         "props": {
             "type": "custom",
             "href": "/",
@@ -225,6 +246,7 @@
         }
     },
     "menu-item#link-politica-entrega": {
+        "title": "Link 3",
         "props": {
             "type": "custom",
             "href": "/",
@@ -233,6 +255,7 @@
         }
     },
     "menu-item#link-politica-cupons": {
+        "title": "Link 4",
         "props": {
             "type": "custom",
             "href": "/",

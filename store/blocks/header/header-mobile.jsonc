@@ -20,6 +20,7 @@
         }
     },
     "flex-layout.row#header-mobile-left": {
+        "title": "Botão menu e busca",
         "children": [
             "image#menu",
             "disclosure-trigger#search-disclosure"
@@ -34,6 +35,7 @@
         ]
     },
     "image#search": {
+        "title": "Botão busca",
         "props": {
             "src": "assets/svgs/search.svg",
             "alt": "Search",
@@ -54,6 +56,7 @@
         }
     },
     "flex-layout.row#header-mobile": {
+        "title": "Barra de navegação",
         "children": [
             "flex-layout.row#header-mobile-left",
             "flex-layout.row#header-mobile-center",
@@ -67,6 +70,7 @@
         }
     },
     "flex-layout.row#header-mobile-right": {
+        "title": "Botão login e carrinho",
         "children": [
             "login",
             "minicart.v2"
@@ -94,6 +98,7 @@
         ]
     },
     "minicart-base-content": {
+        "title": "Minicart conteudo",
         "children": [
             "minicart-empty-state"
         ],
@@ -102,6 +107,7 @@
         }
     },
     "minicart-empty-state": {
+        "title": "Minicart vazio",
         "children": [
             "flex-layout.row#minicart-empty"
         ],
@@ -121,17 +127,20 @@
         ]
     },
     "image#image-cart-icon": {
+        "title": "Icone carrinho vazio",
         "props": {
             "src": "assets/svgs/cartbag.svg"
         }
     },
     "rich-text#cart-message": {
+        "title": "Mensagem carrinho vazio",
         "props": {
             "text": "Seu carrinho está vazio",
             "blockClass": "cart-empty-text"
         }
     },
     "login": {
+        "title": "Login",
         "props": {
             "iconColor": "#000000",
             "useIcon": true,
@@ -141,12 +150,13 @@
         }
     },
     "flex-layout.row#header-mobile-center": {
+        "title": "Logo",
         "children": [
             "logo"
         ]
     },
     "logo": {
-        "title": "Logo header",
+        "title": "Imagem logo",
         "props": {
             "width": 102,
             "height": 24,
@@ -156,6 +166,7 @@
         }
     },
     "image#menu": {
+        "title": "Botão menu",
         "props": {
             "src": "assets/svgs/menu.svg",
             "alt": "Menu",
@@ -165,12 +176,14 @@
         }
     },
     "icon-cart#minicart-icon": {
+        "title": "Icone carrinho",
         "props": {
             "size": 24,
             "color": "#000000"
         }
     },
     "header-row#search-mobile": {
+        "title": "Barra de busca",
         "children": [
             "search-bar"
         ],
@@ -181,6 +194,7 @@
     },
 
     "search-bar": {
+        "title": "Conteudo barra de busca",
         "props": {
             "placeholder": "Digite sua busca",
             "blockClass": "searchBarContainer",
