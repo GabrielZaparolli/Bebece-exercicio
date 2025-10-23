@@ -18,294 +18,14 @@
     },
     "flex-layout.col#home-mobile-col": {
         "children": [
-            "stack-layout#main-banner-stack",
-            "flex-layout.col#main-categorias-banner",
-            "flex-layout.col#banners-navegacao",
-            "flex-layout.col#prateleira-produtos",
-            "flex-layout.col#conheca-mais"
+            "stack-layout#main-banner-stack", //neste arquivo
+            "flex-layout.col#main-categorias-banner", //arquivo categories
+            "flex-layout.col#banners-navegacao", //neste arquivo
+            "flex-layout.col#prateleira-produtos", //arquivo product-shelf
+            "flex-layout.col#conheca-mais" //arquivo learn-more
         ]
     },
-    "flex-layout.col#conheca-mais": {
-        "children": [
-            "flex-layout.col#tit-subt-conhecaMais",
-            "flex-layout.col#banners-conhecaMais"
-        ],
-        "props": {
-            "blockClass": "container-conhecaMais"
-        }
-    },
-    "flex-layout.col#tit-subt-conhecaMais": {
-        "children": [
-            "rich-text#titulo-conheca",
-            "rich-text#subtitulo-conheca"
-        ],
-        "props": {
-            "blockClass": "container-titSubt-conhecaMais"
-        }
-
-    },
-    "rich-text#titulo-conheca": {
-        "props": {
-            "text": "Conheça mais",
-            "blockClass": "titulo-conhecaMais"
-        }
-    },
-    "rich-text#subtitulo-conheca": {
-        "props": {
-            "text": "Fique por dentro de tudo que acontece na Bebecê.",
-            "blockClass": "subtitulo-conhecaMais"
-        }
-    },
-    "flex-layout.col#banners-conhecaMais": {
-
-    },
-    "flex-layout.col#prateleira-produtos": {
-        "children": [
-            "rich-text#prateleira-produtos",
-            "list-context.product-list#lancamentos"
-        ],
-        "props": {
-            "blockClass": "container-prateleira"
-        }
-    },
-    "rich-text#prateleira-produtos": {
-        "props": {
-            "text": "Lançamentos",
-            "blockClass": "titulo-prateleira"
-        }
-    },
-    "list-context.product-list#lancamentos": {
-        "props": {
-            "collection": "156",
-            "maxItems": 6
-        },
-        "blocks": [
-            "product-summary.shelf"
-        ],
-        "children": [
-            "slider-layout#prateleira-lancamentos" // ← Aqui o slider!
-        ]
-    },
-    "slider-layout#prateleira-lancamentos": {
-        "props": {
-            "itemsPerPage": {
-                "phone": 1.5
-            },
-            "showNavigationArrows": "never",
-            "showPaginationDots": "never",
-            "infinite": false,
-            "blockClass": "slider-prateleira"
-        }
-    },
-    "product-summary.shelf": {
-        "children": [
-            "stack-layout#btns-produtos",
-            "product-summary-name",
-            "product-summary-space",
-            "product-summary-price"
-        ],
-        "props": {
-            "blockClass": "prateleira-produtos"
-        }
-    },
-    "stack-layout#btns-produtos": {
-        "children": [
-            "product-summary-image",
-            "flex-layout.row#buttons-produtos"
-        ]
-    },
-    "flex-layout.row#buttons-produtos": {
-        "children": [
-            "add-to-list-btn",
-            "add-to-cart-button#bag"
-        ],
-        "props": {
-            "blockClass": "container-btns-produtos",
-            "horizontalAlign": "right",
-            "verticalAlign": "bottom"
-        }
-    },
-    "add-to-list-btn": {
-        "props": {
-            "blockClass": "btn-wishList"
-        }
-    },
-    "add-to-cart-button#bag": {
-        "props": {
-            "text": "",
-            "isOneClickBuy": false,
-            "customToastUrl": "/checkout",
-            "blockClass": "btn-sacola-shelf"
-        }
-    },
-    //banners nav
-    "flex-layout.col#banners-navegacao": {
-        "children": [
-            "image#banner-nav1",
-            "image#banner-nav2"
-        ],
-        "props": {
-            "blockClass": "container-bannersNav"
-        }
-    },
-    "image#banner-nav1": {
-        "props": {
-            "src": "assets/images/bannerNavegacao/bannerNav-pequeno.jpg",
-            "alt": "Banner navegacao 1",
-            "blockClass": "banner-nav"
-        }
-    },
-    "image#banner-nav2": {
-        "props": {
-            "src": "assets/images/bannerNavegacao/bannerNav-grande.jpg",
-            "alt": "Banner navegacao 2",
-            "blockClass": "banner-nav"
-        }
-    },
-    "flex-layout.col#main-categorias-banner": {
-        "children": [
-            "rich-text#categorias-banner",
-            "slider-layout#images-categorias"
-        ],
-        "props": {
-            "blockClass": "container-categorias"
-        }
-    },
-    "rich-text#categorias-banner": {
-        "props": {
-            "text": "Categorias",
-            "blockClass": "titulo-categorias"
-        }
-    },
-    //categorias banners
-    "slider-layout#images-categorias": {
-        "title": "Banners Categorias",
-        "props": {
-            "itemsPerPage": {
-                "phone": 2.5
-            },
-            "infinite": false,
-            "showPaginationDots": "never",
-            "showNavigationArrows": "never",
-            "usePagination": false,
-            "blockClass": "banners-categorias"
-        },
-        "children": [
-            "flex-layout.col#categoria-1",
-            "flex-layout.col#categoria-2",
-            "flex-layout.col#categoria-3",
-            "flex-layout.col#categoria-4"
-        ]
-    },
-    // Categoria 1 - Botas
-    "flex-layout.col#categoria-1": {
-        "children": [
-            "image#banner-categorias1",
-            "rich-text#nome-categoria-1"
-        ],
-        "props": {
-            "blockClass": "categoria-item"
-        }
-    },
-    "image#banner-categorias1": {
-        "props": {
-            "src": "assets/images/bannerCategorias/banner-botas.jpg",
-            "alt": "Banner Categorias Botas",
-            "link": {
-                "url": "/"
-            },
-            "blockClass": "banners-categorias"
-        }
-    },
-    "rich-text#nome-categoria-1": {
-        "props": {
-            "text": "Botas",
-            "textAlignment": "CENTER",
-            "blockClass": "nome-categoria"
-        }
-    },
-    // Categoria 2 - Scarpins
-    "flex-layout.col#categoria-2": {
-        "children": [
-            "image#banner-categorias2",
-            "rich-text#nome-categoria-2"
-        ],
-        "props": {
-            "blockClass": "categoria-item"
-        }
-    },
-    "image#banner-categorias2": {
-        "props": {
-            "src": "assets/images/bannerCategorias/banner-scarpins.jpg",
-            "alt": "Banner Categorias Scarpins",
-            "link": {
-                "url": "/"
-            },
-            "blockClass": "banners-categorias"
-        }
-    },
-    "rich-text#nome-categoria-2": {
-        "props": {
-            "text": "Scarpins",
-            "textAlignment": "CENTER",
-            "blockClass": "nome-categoria"
-        }
-    },
-    // Categoria 3 - Sapatilhas
-    "flex-layout.col#categoria-3": {
-        "children": [
-            "image#banner-categorias3",
-            "rich-text#nome-categoria-3"
-        ],
-        "props": {
-            "blockClass": "categoria-item"
-        }
-    },
-    "image#banner-categorias3": {
-        "props": {
-            "src": "assets/images/bannerCategorias/banner-sapatilhas.jpg",
-            "alt": "Banner Categorias Sapatilhas",
-            "link": {
-                "url": "/"
-            },
-            "blockClass": "banners-categorias"
-        }
-    },
-    "rich-text#nome-categoria-3": {
-        "props": {
-            "text": "Sapatilhas",
-            "textAlignment": "CENTER",
-            "blockClass": "nome-categoria"
-        }
-    },
-    // Categoria 4 - Sandálias
-    "flex-layout.col#categoria-4": {
-        "children": [
-            "image#banner-categorias4",
-            "rich-text#nome-categoria-4"
-        ],
-        "props": {
-            "blockClass": "categoria-item"
-        }
-    },
-    "image#banner-categorias4": {
-        "props": {
-            "src": "assets/images/bannerCategorias/banner-sandalias.jpg",
-            "alt": "Banner Categorias Sandálias",
-            "link": {
-                "url": "/"
-            },
-            "blockClass": "banners-categorias"
-        }
-    },
-    "rich-text#nome-categoria-4": {
-        "props": {
-            "text": "Sandálias",
-            "textAlignment": "CENTER",
-            "blockClass": "nome-categoria"
-        }
-    },
-    //main banner
+    //main banner header
     "stack-layout#main-banner-stack": {
         "children": [
             "slider-layout#images-banner",
@@ -383,6 +103,30 @@
             },
             "maxWidth": "100%",
             "blockClass": "banner-mobile"
+        }
+    },
+        //banners nav
+    "flex-layout.col#banners-navegacao": {
+        "children": [
+            "image#banner-nav1",
+            "image#banner-nav2"
+        ],
+        "props": {
+            "blockClass": "container-bannersNav"
+        }
+    },
+    "image#banner-nav1": {
+        "props": {
+            "src": "assets/images/bannerNavegacao/bannerNav-pequeno.jpg",
+            "alt": "Banner navegacao 1",
+            "blockClass": "banner-nav"
+        }
+    },
+    "image#banner-nav2": {
+        "props": {
+            "src": "assets/images/bannerNavegacao/bannerNav-grande.jpg",
+            "alt": "Banner navegacao 2",
+            "blockClass": "banner-nav"
         }
     }
 }
