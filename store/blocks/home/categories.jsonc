@@ -1,0 +1,145 @@
+{
+    "flex-layout.col#main-categorias-banner": {
+        "children": [
+            "rich-text#categorias-banner",
+            "slider-layout#images-categorias"
+        ],
+        "props": {
+            "blockClass": "container-categorias"
+        }
+    },
+    "rich-text#categorias-banner": {
+        "props": {
+            "text": "Categorias",
+            "blockClass": "titulo-categorias"
+        }
+    },
+    //categorias banners
+    "slider-layout#images-categorias": {
+        "title": "Banners Categorias",
+        "props": {
+            "itemsPerPage": {
+                "phone": 2.5
+            },
+            "infinite": false,
+            "showPaginationDots": "never",
+            "showNavigationArrows": "never",
+            "usePagination": false,
+            "blockClass": "banners-categorias"
+        },
+        "children": [
+            "flex-layout.col#categoria-1",
+            "flex-layout.col#categoria-2",
+            "flex-layout.col#categoria-3",
+            "flex-layout.col#categoria-4"
+        ]
+    },
+    // Categoria 1 - Botas
+    "flex-layout.col#categoria-1": {
+        "children": [
+            "image#banner-categorias1",
+            "rich-text#nome-categoria-1"
+        ],
+        "props": {
+            "blockClass": "categoria-item"
+        }
+    },
+    "image#banner-categorias1": {
+        "props": {
+            "src": "assets/images/bannerCategorias/banner-botas.jpg",
+            "alt": "Banner Categorias Botas",
+            "link": {
+                "url": "/"
+            },
+            "blockClass": "banners-categorias"
+        }
+    },
+    "rich-text#nome-categoria-1": {
+        "props": {
+            "text": "Botas",
+            "textAlignment": "CENTER",
+            "blockClass": "nome-categoria"
+        }
+    },
+    // Categoria 2 - Scarpins
+    "flex-layout.col#categoria-2": {
+        "children": [
+            "image#banner-categorias2",
+            "rich-text#nome-categoria-2"
+        ],
+        "props": {
+            "blockClass": "categoria-item"
+        }
+    },
+    "image#banner-categorias2": {
+        "props": {
+            "src": "assets/images/bannerCategorias/banner-scarpins.jpg",
+            "alt": "Banner Categorias Scarpins",
+            "link": {
+                "url": "/"
+            },
+            "blockClass": "banners-categorias"
+        }
+    },
+    "rich-text#nome-categoria-2": {
+        "props": {
+            "text": "Scarpins",
+            "textAlignment": "CENTER",
+            "blockClass": "nome-categoria"
+        }
+    },
+    // Categoria 3 - Sapatilhas
+    "flex-layout.col#categoria-3": {
+        "children": [
+            "image#banner-categorias3",
+            "rich-text#nome-categoria-3"
+        ],
+        "props": {
+            "blockClass": "categoria-item"
+        }
+    },
+    "image#banner-categorias3": {
+        "props": {
+            "src": "assets/images/bannerCategorias/banner-sapatilhas.jpg",
+            "alt": "Banner Categorias Sapatilhas",
+            "link": {
+                "url": "/"
+            },
+            "blockClass": "banners-categorias"
+        }
+    },
+    "rich-text#nome-categoria-3": {
+        "props": {
+            "text": "Sapatilhas",
+            "textAlignment": "CENTER",
+            "blockClass": "nome-categoria"
+        }
+    },
+    // Categoria 4 - Sandálias
+    "flex-layout.col#categoria-4": {
+        "children": [
+            "image#banner-categorias4",
+            "rich-text#nome-categoria-4"
+        ],
+        "props": {
+            "blockClass": "categoria-item"
+        }
+    },
+    "image#banner-categorias4": {
+        "props": {
+            "src": "assets/images/bannerCategorias/banner-sandalias.jpg",
+            "alt": "Banner Categorias Sandálias",
+            "link": {
+                "url": "/"
+            },
+            "blockClass": "banners-categorias"
+        }
+    },
+    "rich-text#nome-categoria-4": {
+        "props": {
+            "text": "Sandálias",
+            "textAlignment": "CENTER",
+            "blockClass": "nome-categoria"
+        }
+    }
+}
