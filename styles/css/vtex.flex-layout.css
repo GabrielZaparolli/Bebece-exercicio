@@ -104,5 +104,26 @@
 }
 
 .flexCol--container-conhecaMais {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
   background-color: #F7F7F7;
+}
+
+.flexCol--banner-inst-content {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.flexCol--container-banner-inst {
+  display: flex;
+  gap: 10px;
+}
+.flexCol--container-banner-inst .flexColChild--container-banner-inst {
+  line-height: 0;
+  padding-bottom: 5px;
+}
+.flexCol--container-banner-inst .flexColChild--banner-inst-content {
+  display: flex;
 }

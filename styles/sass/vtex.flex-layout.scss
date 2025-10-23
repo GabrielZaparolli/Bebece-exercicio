@@ -102,15 +102,40 @@
 }
 
 .flexCol--container-prateleira,
-.flexCol--container-conhecaMais{
+.flexCol--container-conhecaMais {
     padding: 32px 16px 48px 16px;
 }
 
-.flexCol--container-titSubt-conhecaMais{
+.flexCol--container-titSubt-conhecaMais {
     display: flex;
     gap: 4px;
 }
 
-.flexCol--container-conhecaMais{
+.flexCol--container-conhecaMais {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
     background-color: #F7F7F7;
+}
+
+.flexCol--banner-inst-content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.flexCol--container-banner-inst {
+    display: flex;
+    gap: 10px;
+   
+
+    .flexColChild--container-banner-inst {
+        line-height: 0;
+        padding-bottom: 5px;
+    }
+
+    .flexColChild--banner-inst-content{
+        display: flex;
+       
+    }
 }

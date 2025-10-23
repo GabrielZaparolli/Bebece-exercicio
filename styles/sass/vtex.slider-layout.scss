@@ -54,3 +54,22 @@
     align-items: center;
     gap: 20px;
 }
+
+.paginationDotsContainer--slider-banners-institucional {
+    display: flex;
+    justify-content: end;
+    gap: 4px;
+    bottom: -40px;
+
+    .paginationDot {
+        width: 6px !important;
+        height: 6px !important;
+        padding: 0 !important;
+        margin: 0 !important; 
+        background-color: #8A8A8A;
+    }
+
+    .paginationDot--isActive{
+        background-color: #1D1D1D;
+    }
+}
