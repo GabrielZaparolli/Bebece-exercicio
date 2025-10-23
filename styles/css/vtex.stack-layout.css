@@ -3,3 +3,7 @@
 .stackItem--banner-button-container {
   bottom: 0;
 }
+
+.stackItem--container-btns-produtos {
+  right: -150px;
+}

@@ -96,6 +96,7 @@
 .flexCol--container-prateleira,
 .flexCol--container-conhecaMais {
   padding: 32px 16px 48px 16px;
+  width: 100%;
 }
 
 .flexCol--container-titSubt-conhecaMais {
@@ -126,4 +127,26 @@
 }
 .flexCol--container-banner-inst .flexColChild--banner-inst-content {
   display: flex;
+}
+
+.flexColChild--container-conhecaMais {
+  width: 100%;
+}
+
+.flexRow--btn-sacola :global(.vtex-button),
+.flexRow--btn-wishList :global(.vtex-button) {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  width: auto;
+  height: auto;
+}
+.flexRow--btn-sacola :global(.vtex-button) :global(.vtex-button__label),
+.flexRow--btn-wishList :global(.vtex-button) :global(.vtex-button__label) {
+  padding: 6px !important;
+}
+
+.flexRowContent--container-btns-produtos {
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
 }

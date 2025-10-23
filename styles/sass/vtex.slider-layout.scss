@@ -30,7 +30,8 @@
 
 }
 
-.sliderTrackContainer--banners-categorias {
+.sliderTrackContainer--banners-categorias,
+.sliderTrackContainer--slider-prateleira {
     overflow-x: scroll !important;
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
@@ -72,4 +73,10 @@
     .paginationDot--isActive{
         background-color: #1D1D1D;
     }
+}
+
+
+.sliderTrack--slider-banners-institucional{
+    display: flex !important;
+    align-items: start !important ;
 }

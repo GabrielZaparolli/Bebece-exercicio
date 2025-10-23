@@ -75,6 +75,7 @@
         background-color: #ffffff;
         margin-top: 5px;
     }
+
     .resultslist--searchBarContainer {
         width: 100% !important;
         min-width: 100% !important;
@@ -94,6 +95,25 @@
     border-radius: 4px;
 }
 
-.imageElement--banner-nav{
+.imageElement--banner-nav {
     width: 100%;
+}
+
+.discountInsideContainer {
+    bottom: 0;
+    margin-bottom: 10px;
+    left: 0;
+    width: 80px;
+    padding: 0 !important;
+    font-family: vars.$fontFamilyOpen;
+    font-weight: 400;
+    font-size: 12px;
+    background-color: transparent;
+    color: #B11B26;
+
+    &::after {
+        content: ' OFF';
+        display: inline-flex;
+        
+    }
 }
