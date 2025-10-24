@@ -103,3 +103,52 @@
   content: " OFF";
   display: inline-flex;
 }
+
+.logoContainer {
+  padding: 0 !important;
+}
+
+.infoCardContainer--banner-menu-mobile-header {
+  background-position: bottom;
+}
+
+.infoCardTextContainer--banner-menu-mobile-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  margin: 0 !important;
+  width: 100%;
+  padding: 20px;
+}
+.infoCardTextContainer--banner-menu-mobile-header .infoCardHeadline--banner-menu-mobile-header {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  margin: 0 !important;
+}
+
+.infoCardContainer--banner-menu-mobile-header {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.infoCardCallActionContainer--banner-menu-mobile-header {
+  margin: 0 !important;
+}
+.infoCardCallActionContainer--banner-menu-mobile-header :global(.vtex-button) {
+  background-color: transparent;
+  border: none;
+  min-height: 0 !important;
+}
+.infoCardCallActionContainer--banner-menu-mobile-header :global(.vtex-button) :global(.vtex-button__label) {
+  padding: 0 !important;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  color: #FFFFFF;
+  text-decoration: underline;
+}

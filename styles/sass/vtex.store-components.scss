@@ -117,3 +117,58 @@
         
     }
 }
+
+.logoContainer{
+    padding: 0 !important;
+}
+
+.infoCardContainer--banner-menu-mobile-header{
+    background-position: bottom;
+}
+
+.infoCardTextContainer--banner-menu-mobile-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    margin: 0 !important;
+    width: 100%;
+    padding: 20px;
+
+    .infoCardHeadline--banner-menu-mobile-header{
+        color: #fff;
+        font-family: vars.$fontFamilyOpen;
+        font-weight: 600;
+        font-size: 12px;
+        margin: 0 !important;
+        
+    }
+
+}
+.infoCardContainer--banner-menu-mobile-header{
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.infoCardCallActionContainer--banner-menu-mobile-header{
+    margin: 0 !important;
+
+    :global(.vtex-button){
+        background-color: transparent;
+        border: none;
+        min-height: 0 !important;
+
+        :global(.vtex-button__label){
+            padding: 0 !important;
+            
+            font-size: 12px;
+            font-weight: 300;
+            font-family: vars.$fontFamilyOpen;
+            color: #FFFFFF;
+            text-decoration: underline;
+        
+        }
+    }
+}
