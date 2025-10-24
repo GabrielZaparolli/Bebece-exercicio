@@ -164,14 +164,19 @@
 
 }
 
+.flexRow--container-btns-produtos{
+    height: 100%;
+}
+
 .flexRowContent--container-btns-produtos {
     display: flex;
     flex-direction: column;
-    gap: 130px;
+    justify-content: space-between;
+    height: 100%;
 
     .stretchChildrenWidth {
         display: flex;
         justify-content: flex-end;
-        padding: 0px 5px;
+        padding: 0 5px;
     }
 }
