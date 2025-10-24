@@ -1,0 +1,61 @@
+{
+    "drawer#menu-mobile": {
+        "title": "Menu Mobile",
+        "props": {
+            "blockClass": "container-menu-mobile"
+        },
+        "children": [
+            "flex-layout.col#menu-mobile"
+        ]
+    },
+    "flex-layout.col#menu-mobile": {
+        "props": {
+            "blockClass": "menu-mobile"
+        },
+        "children": [
+            "flex-layout.row#menu-mobile-header",
+            "info-card#banner-menu-header"
+            // "flex-layout.col#list-menu-mobile"
+        ]
+    },
+    "flex-layout.row#menu-mobile-header": {
+        "title": "Menu Mobile Header",
+        "props": {
+            "blockClass": "menu-mobile-header",
+            "horizontalAlign": "between",
+            "verticalAlign": "middle"
+        },
+        "children": [
+            "flex-layout.row#logo-menu-mobile",
+            "flex-layout.row#close-menu-mobile"
+        ]
+    },
+    "flex-layout.row#logo-menu-mobile": {
+        "children": [
+            "logo#header"
+        ],
+        "props": {
+            "blockClass": "logo-menu-mobile"
+        }
+    },
+    "flex-layout.row#close-menu-mobile": {
+        "title": "Close Menu Mobile",
+        "children": [
+            "drawer-close-button"
+        ],
+        "props": {
+            "blockClass": "close-menu-mobile"
+        }
+    },
+    "info-card#banner-menu-header": {
+        "title": "Banner Menu Header",
+        "props": {
+            "imageUrl": "assets/images/bannerPrincipal1.jpg",
+            "headline": "Celebration - 20 anos",
+            "callToActionText": "Conheça",
+            "callToActionUrl": "/",
+            "isFullModeStyle": true,
+            "blockClass": "banner-menu-mobile-header"
+        }
+    }
+}

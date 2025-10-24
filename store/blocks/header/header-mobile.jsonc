@@ -22,7 +22,7 @@
     "flex-layout.row#header-mobile-left": {
         "title": "Botão menu e busca",
         "children": [
-            "image#menu",
+            "drawer#menu-mobile",
             "disclosure-trigger#search-disclosure"
         ],
         "props": {
@@ -163,10 +163,10 @@
     "flex-layout.row#header-mobile-center": {
         "title": "Logo",
         "children": [
-            "logo"
+            "logo#header"
         ]
     },
-    "logo": {
+    "logo#header": {
         "title": "Imagem logo",
         "props": {
             "width": 102,
@@ -174,16 +174,6 @@
             "url": "assets/svgs/logo.svg",
             "href": "/",
             "alt": "Logo Bebecê"
-        }
-    },
-    "image#menu": {
-        "title": "Botão menu",
-        "props": {
-            "src": "assets/svgs/menu.svg",
-            "alt": "Menu",
-            "width": 14,
-            "height": 14,
-            "maxHeight": 24
         }
     },
     "icon-cart#minicart-icon": {
@@ -211,7 +201,8 @@
             "showSuggestionsOnFocus": true,
             "maxTopSearches": 5,
             "autocompleteMode": "terms",
-            "autoFocus": true
+            "autoFocus": true,
+            "openAutocompleteOnFocus": true 
         }
     }
 }
