@@ -82,7 +82,8 @@
     },
     "add-to-list-btn#wish-list": {
         "props": {
-            "blockClass": "btn-wishList"
+            "blockClass": "btn-wishList",
+            "iconIsActive": "icon-check"
         }
     },
     "flex-layout.row#add-to-cart-btn": {
