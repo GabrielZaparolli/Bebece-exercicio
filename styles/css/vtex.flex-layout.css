@@ -111,6 +111,12 @@
   background-color: #F7F7F7;
 }
 
+.flexRowContent--container-banner-inst {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .flexCol--banner-inst-content {
   display: flex;
   justify-content: flex-start;

@@ -39,6 +39,10 @@
             "itemsPerPage": {
                 "phone": 1
             },
+            "autoplay": {
+                "timeout": 3000,
+                "stopOnHover": true
+            },
             "infinite": true,
             "showNavigationArrows": "never",
             "showPaginationDots": "always",
