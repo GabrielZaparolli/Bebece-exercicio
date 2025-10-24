@@ -68,9 +68,7 @@
             
         ],
         "props": {
-            "blockClass": "container-btns-produtos",
-            "horizontalAlign": "right",
-            "verticalAlign": "bottom"
+            "blockClass": "container-btns-produtos"
         }
     },
     "flex-layout.row#wish-list-btn": {

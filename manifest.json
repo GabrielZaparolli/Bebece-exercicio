@@ -25,6 +25,8 @@
     "vtex.menu": "2.x",
     "vtex.store-icons": "0.x",
     "vtex.minicart": "2.x",
+    "vtex.product-list": "0.x",
+    "vtex.checkout-summary": "0.x",
     "vtex.product-details": "1.x",
     "vtex.product-kit": "1.x",
     "vtex.search": "2.x",

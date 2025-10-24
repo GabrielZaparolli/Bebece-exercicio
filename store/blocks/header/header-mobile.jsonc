@@ -39,9 +39,7 @@
         "props": {
             "src": "assets/svgs/search.svg",
             "alt": "Search",
-            
             "blockClass": "search-icon"
-            
         }
     },
     "header-row#mobile": {
@@ -100,11 +98,24 @@
     "minicart-base-content": {
         "title": "Minicart conteudo",
         "children": [
+            "minicart-product-list"
+        ],
+        "blocks": [
             "minicart-empty-state"
         ],
         "props": {
             "blockClass": "minicart-base-content"
         }
+    },
+    "minicart-product-list": {
+        "blocks": [
+            "product-list#minicart"
+        ]
+    },
+    "product-list#minicart": {
+        "blocks": [
+            "product-list-content-mobile"
+        ]
     },
     "minicart-empty-state": {
         "title": "Minicart vazio",
@@ -192,7 +203,6 @@
             "fullWidth": true
         }
     },
-
     "search-bar": {
         "title": "Conteudo barra de busca",
         "props": {
