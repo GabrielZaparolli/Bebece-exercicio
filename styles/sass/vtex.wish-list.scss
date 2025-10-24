@@ -5,10 +5,9 @@
 .wishlistIconContainer--btn-wishList {
     min-width: 12px;
     min-height: 12px;
-
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     padding: 0 !important;
 
     &::after {

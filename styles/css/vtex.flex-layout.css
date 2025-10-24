@@ -150,3 +150,8 @@
   flex-direction: column;
   gap: 130px;
 }
+.flexRowContent--container-btns-produtos .stretchChildrenWidth {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 5px;
+}

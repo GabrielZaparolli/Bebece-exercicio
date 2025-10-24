@@ -147,26 +147,31 @@
 
 
 .flexRow--btn-sacola,
-.flexRow--btn-wishList{
+.flexRow--btn-wishList {
     :global(.vtex-button) {
         border: none;
         background-color: #ffffff00;
-        
+
         width: auto;
         height: auto;
-        
+
 
         :global(.vtex-button__label) {
             padding: 6px !important;
         }
     }
 
-   
+
 }
 
-.flexRowContent--container-btns-produtos{
+.flexRowContent--container-btns-produtos {
     display: flex;
     flex-direction: column;
     gap: 130px;
-}
 
+    .stretchChildrenWidth {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0px 5px;
+    }
+}
