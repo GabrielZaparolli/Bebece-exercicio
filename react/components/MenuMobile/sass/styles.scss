@@ -1,3 +1,5 @@
+@use '../../../../styles/sass/padroes/fonts.scss' as vars;
+
 .menuMobileContainer {
     position: fixed;
     top: 0;
@@ -6,7 +8,7 @@
     width: 0;
     background-color: #ffffff;
     overflow: hidden;
-    transition: width 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
     z-index: 99999999;
 }
 
@@ -15,14 +17,11 @@
 }
 
 
-.headerMenuMobile {
-    padding: 16px;
-}
-
 .logoMenuMobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 16px;
 }
 
 .closeButton {
@@ -32,4 +31,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.bannerMenuMobile{
+    height: 120px ;
+    width: 100%;
+    background-image: url('../../../../assets/images/bannerPrincipal1.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+
+    .contentBannerMenu{
+        font-family: vars.$fontFamilyOpen;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        height: 100%;
+        padding: 20px;
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        a{
+            font-size: 12px;
+            font-weight: 300;
+            text-decoration: underline;
+        }
+    }
+
 }

@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import styles from './sass/styles.css'
 import { MenuMobile } from "../MenuMobile";
+import { title } from "process";
 
 interface HeaderMobileProps {
-    iconeMenu?: string;
-    logoMenu?: string;
+    iconeMenu?: any;
+    logoMenu?: any;
+    parentIdCategoria?: string;
 }
+
 
 const IconeMenu = ({ iconeMenu }: { iconeMenu?: string }) => {
     if (iconeMenu) {
@@ -21,7 +24,7 @@ const IconeMenu = ({ iconeMenu }: { iconeMenu?: string }) => {
     )
 }
 
-export const HeaderMobile = ({ iconeMenu, logoMenu }: HeaderMobileProps) => {
+export const HeaderMobile = ({ iconeMenu, logoMenu, parentIdCategoria }: HeaderMobileProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const handleOpen = () => {
@@ -45,6 +48,7 @@ export const HeaderMobile = ({ iconeMenu, logoMenu }: HeaderMobileProps) => {
                 logo={logoMenu}
                 onClose={handleClose}
                 isOpen={isMenuOpen}
+                parentIdCategoria={parentIdCategoria}
             />
         </div>
     )
@@ -55,7 +59,7 @@ HeaderMobile.schema = {
     type: "object",
     properties: {
         iconeMenu: {
-            title: "Ícone do Botão Menu",
+            title: "Ícone do Botão Abrir Menu",
             description: "Upload de um ícone personalizado para o botão hamburguer",
             type: "string",
             widget: {
@@ -64,11 +68,17 @@ HeaderMobile.schema = {
         },
         logoMenu: {
             title: "Logo do Menu",
-            description: "Logo que aparece dentro do menu lateral quando aberto",
+            description: "Logo que aparece dentro do menu mobile aberto",
             type: "string",
             widget: {
                 "ui:widget": "image-uploader"
             }
+        },
+        parentIdCategoria: {
+            title: "IDs das Categorias",
+            description: "Digite os IDs separados por vírgula (ex: 155, 160, 170)",
+            type: "string",
+            default: "155"
         }
     }
 }

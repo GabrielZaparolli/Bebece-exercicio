@@ -10,14 +10,99 @@ interface MenuMobileProps {
     logo?: string;
     onClose: () => void
     isOpen: boolean
-    department?: [];
+    parentIdCategoria?: string;
 }
 
+interface ItensCategorys {
+    name: string;
+    id: number;
+    children: ItensCategorys[];
+}
+
+interface MenuCategorysProps {
+    parentIdCategoria?: string;
+}
+
+const MenuCategorys = ({ parentIdCategoria }: MenuCategorysProps) => {
+    const [categories, setCategories] = useState<ItensCategorys[]>([])
+
+    useEffect(() => {
+        if (!parentIdCategoria || parentIdCategoria.trim() === '') {
+            setCategories([]);
+            return;
+        }
+
+        const fetchCategorys = async () => {
+            try {
+                // Converte string para strig
+                const ids = parentIdCategoria
+                    .split(',')
+                    .map(id => parseInt(id.trim()))
+                    .filter(id => !isNaN(id))
+
+                console.log('IDs para buscar:', ids)
+
+                const res = await fetch(
+                    'https://gabrieldevtestes--wecode.myvtex.com/api/catalog_system/pub/category/tree/2'
+                )
+                const data = await res.json()
+
+                console.log('Árvore completa:', data)
+
+                // Encontra a categoria pai na árvore
+                const findCategory = (categories: ItensCategorys[], id: number): ItensCategorys | null => {
+                    for (const cat of categories) {
+                        if (cat.id === id) return cat
+                        if (cat.children && cat.children.length > 0) {
+                            const found = findCategory(cat.children, id)
+                            if (found) return found
+                        }
+                    }
+                    return null
+                }
+
+                // Busca todas as categorias pelos IDs
+                const foundCategories = ids
+                    .map(id => findCategory(data, id))
+                    .filter(cat => cat !== null) as ItensCategorys[]
+
+                console.log('Categorias encontradas:', foundCategories)
+                setCategories(foundCategories)
+
+            } catch (error) {
+                console.error("Erro ao buscar categorias", error)
+            }
+        }
+
+        fetchCategorys()
+    }, [parentIdCategoria])
+
+    if (categories.length === 0) return null
+
+    return (
+        <>
+            {categories.map((parentCategory) => (
+                <React.Fragment key={parentCategory.id}>
+                    
+                    <li className={styles.parentCategory}>
+                        <a>{parentCategory.name}</a>
+                    </li>
+
+                    {parentCategory.children && parentCategory.children.map((item) => (
+                        <li key={item.id} className={styles.childCategory}>
+                            <a>{item.name}</a>
+                        </li>
+                    ))}
+                </React.Fragment>
+            ))}
+        </>
+    )
+}
 
 const LogoSvg = () => {
     return (
         <svg width="102" height="24" viewBox="0 0 102 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_1_1822)">
+            <g clipPath="url(#clip0_1_1822)">
                 <path d="M101.185 20.3307C101.01 20.2137 100.776 20.2722 100.674 20.4622C99.6361 22.3623 97.8675 23.0346 96.289 23.0346C92.7227 23.0346 90.8226 19.4976 90.618 15.3174C90.6034 15.0982 90.6034 14.8789 90.6034 14.6597V14.6451H100.835C100.981 14.6451 101.098 14.5282 101.098 14.382C101.171 11.985 100.089 7.41028 94.7981 7.41028C90.1795 7.41028 86.2188 10.845 86.2188 15.6536C86.2188 20.5499 90.3257 23.9992 94.5643 23.9992C97.2244 23.9992 100.075 22.6546 101.375 20.4476L101.185 20.3307ZM93.9943 7.81952C96.0843 8.28723 96.7859 11.8681 96.6836 14.2505H90.6034C90.6765 10.465 92.1088 7.81952 93.9943 7.81952Z" fill="#1D1D1D" />
                 <path d="M67.9355 20.4622C66.8978 22.3623 65.1293 23.0346 63.5508 23.0346C59.9845 23.0346 58.0845 19.4976 57.8798 15.3174C57.8652 15.0982 57.8652 14.8789 57.8652 14.6597V14.6451H68.0963C68.2425 14.6451 68.3594 14.5282 68.3594 14.382C68.4325 11.985 67.3509 7.41028 62.06 7.41028C57.4414 7.41028 53.4805 10.845 53.4805 15.6536C53.4805 20.5499 57.5875 23.9992 61.8261 23.9992C64.4862 23.9992 67.3363 22.6546 68.6371 20.4476L68.4763 20.3307C68.2863 20.2137 68.0378 20.2722 67.9355 20.4622ZM61.2561 7.81952C63.3462 8.28723 64.0477 11.8681 63.9454 14.2505H57.8652C57.9529 10.465 59.3853 7.81952 61.2561 7.81952Z" fill="#1D1D1D" />
                 <path d="M35.6621 0.00012207V19.483C35.6621 21.9823 37.6791 23.9993 40.1784 23.9993V4.51641C40.1784 2.03172 38.1614 0.00012207 35.6621 0.00012207Z" fill="#1D1D1D" />
@@ -38,7 +123,6 @@ const LogoSvg = () => {
     )
 }
 
-
 const MenuHeader = ({ logo, onClose }: MenuHeaderProps) => {
     return (
         <div className={styles.headerMenuMobile}>
@@ -55,27 +139,42 @@ const MenuHeader = ({ logo, onClose }: MenuHeaderProps) => {
                     </svg>
                 </button>
             </div>
+
+            <div className={styles.bannerMenuMobile}>
+                <div className={styles.contentBannerMenu}>
+                    <p>Celebration - 20 Anos</p>
+                    <a> Conheça</a>
+                </div>
+            </div>
         </div>
     )
 }
 
-const MenuItens = ({ logo, onClose }: MenuHeaderProps) => {
+interface MenuItensProps {
+    logo?: string;
+    onClose: () => void;
+    parentIdCategoria?: string;
+}
+
+const MenuItens = ({ logo, onClose, parentIdCategoria }: MenuItensProps) => {
     return (
         <div className={styles.menuItensContainer}>
             <MenuHeader logo={logo} onClose={onClose} />
+            <ul className={styles.menuList}>
+                <MenuCategorys parentIdCategoria={parentIdCategoria} />
+            </ul>
         </div>
     )
 }
 
-export const MenuMobile = ({ logo, onClose, isOpen }: MenuMobileProps) => {
+export const MenuMobile = ({ logo, onClose, isOpen, parentIdCategoria }: MenuMobileProps) => {
     return (
         <div className={`${styles.menuMobileContainer} ${isOpen ? styles.menuOpen : ''}`}>
             <MenuItens
                 logo={logo}
                 onClose={onClose}
+                parentIdCategoria={parentIdCategoria}
             />
         </div>
     )
 }
-
-// Schema removido - agora é controlado pelo HeaderMobile
