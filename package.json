@@ -24,19 +24,22 @@
     ]
   },
   "devDependencies": {
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
     "@vtex/prettier-config": "0.1.4",
+    "concurrently": "^9.2.1",
     "eslint": "7.12.1",
     "eslint-config-vtex": "12.3.2",
     "eslint-config-vtex-react": "6.3.2",
     "husky": "4.2.3",
     "lint-staged": "10.1.1",
     "prettier": "2.0.2",
-    "typescript": "3.8.3"
+    "sass": "^1.93.2",
+    "typescript": "^3.8.3"
   },
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "concurrently": "^9.2.1",
-    "sass": "^1.93.2"
+    "react": "^19.2.0"
   }
 }

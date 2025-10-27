@@ -103,3 +103,7 @@
   content: " OFF";
   display: inline-flex;
 }
+
+.logoContainer {
+  padding: 0 !important;
+}

@@ -1,0 +1,34 @@
+.menuMobileContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  z-index: 99999999;
+}
+
+.menuMobileContainer.menuOpen {
+  width: 331px;
+}
+
+.headerMenuMobile {
+  padding: 16px;
+}
+
+.logoMenuMobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeButton {
+  background-color: #EEEEEE;
+  border: none;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

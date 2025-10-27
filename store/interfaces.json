@@ -1,0 +1,10 @@
+{
+    "MenuMobile": {
+        "component": "MenuMobile",
+        "composition": "children"
+    },
+    "HeaderMobile" : {
+        "component": "HeaderMobile",
+        "composition": "children"
+    }
+}
