@@ -42,7 +42,11 @@
             "infinite": true,
             "showNavigationArrows": "never",
             "showPaginationDots": "always",
-            "blockClass": "slider-banners-institucional"
+            "blockClass": "slider-banners-institucional",
+            "autoPlay": {
+                "timeout": 5000,
+                "stopOnHover": true
+            }
         },
         "children": [
             "flex-layout.row#banner-inst-1",
