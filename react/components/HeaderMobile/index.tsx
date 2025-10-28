@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 import styles from './sass/styles.css'
-import { MenuMobile } from "../MenuMobile";
-import { title } from "process";
+import { MenuMobile } from "../MenuMobile"
+
+// ============= INTERFACES =============
+interface SubCategory {
+    name: string
+    url: string
+}
+
+interface Category {
+    categoryName: string
+    categoryUrl: string
+    subCategories: SubCategory[]
+}
 
 interface HeaderMobileProps {
-    iconeMenu?: any;
-    logoMenu?: any;
-    parentIdCategoria?: string;
+    iconeMenu?: string
+    logoMenu?: string
+    categories?: Category[]
 }
 
 
@@ -24,22 +35,21 @@ const IconeMenu = ({ iconeMenu }: { iconeMenu?: string }) => {
     )
 }
 
-export const HeaderMobile = ({ iconeMenu, logoMenu, parentIdCategoria }: HeaderMobileProps) => {
+export const HeaderMobile = ({ iconeMenu, logoMenu, categories = [] }: HeaderMobileProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const handleOpen = () => {
         setIsMenuOpen(true)
-        console.log("aberto")
+        console.log("Menu aberto")
     }
 
     const handleClose = () => {
         setIsMenuOpen(false)
-        console.log("fechado")
+        console.log("Menu fechado")
     }
 
     return (
         <div className={styles.containerBtnMenu}>
-
             <button className={styles.menuButton} onClick={handleOpen}>
                 <IconeMenu iconeMenu={iconeMenu} />
             </button>
@@ -48,19 +58,21 @@ export const HeaderMobile = ({ iconeMenu, logoMenu, parentIdCategoria }: HeaderM
                 logo={logoMenu}
                 onClose={handleClose}
                 isOpen={isMenuOpen}
-                parentIdCategoria={parentIdCategoria}
+                categories={categories}
             />
         </div>
     )
 }
 
+
 HeaderMobile.schema = {
     title: "Header Mobile",
+    description: "Cabeçalho mobile com menu de categorias",
     type: "object",
     properties: {
         iconeMenu: {
-            title: "Ícone do Botão Abrir Menu",
-            description: "Upload de um ícone personalizado para o botão hamburguer",
+            title: "Ícone do Botão Menu",
+            description: "Upload de um ícone personalizado para o botão hamburguer (deixe vazio para usar o padrão)",
             type: "string",
             widget: {
                 "ui:widget": "image-uploader"
@@ -68,17 +80,61 @@ HeaderMobile.schema = {
         },
         logoMenu: {
             title: "Logo do Menu",
-            description: "Logo que aparece dentro do menu mobile aberto",
+            description: "Logo que aparece dentro do menu mobile aberto (deixe vazio para usar a logo padrão)",
             type: "string",
             widget: {
                 "ui:widget": "image-uploader"
             }
         },
-        parentIdCategoria: {
-            title: "IDs das Categorias",
-            description: "Digite os IDs separados por vírgula (ex: 155, 160, 170)",
-            type: "string",
-            default: "155"
+        categories: {
+            title: "Categorias do Menu",
+            description: "Configure as categorias e subcategorias que aparecerão no menu mobile",
+            type: "array",
+            minItems: 0,
+            maxItems: 20,
+            items: {
+                title: "Categoria",
+                type: "object",
+                properties: {
+                    categoryName: {
+                        title: "Nome da Categoria",
+                        description: "Nome que aparecerá no menu (ex: Roupas, Calçados, Acessórios)",
+                        type: "string",
+                        default: ""
+                    },
+                    categoryUrl: {
+                        title: "URL da Categoria",
+                        description: "Link da categoria (ex: /roupas, /calcados). Se tiver subcategorias, este link é opcional",
+                        type: "string",
+                        default: ""
+                    },
+                    subCategories: {
+                        title: "Subcategorias",
+                        description: "Adicione subcategorias que aparecerão quando expandir a categoria principal",
+                        type: "array",
+                        minItems: 0,
+                        maxItems: 30,
+                        items: {
+                            title: "Subcategoria",
+                            type: "object",
+                            properties: {
+                                name: {
+                                    title: "Nome da Subcategoria",
+                                    description: "Nome que aparecerá no submenu (ex: Camisetas, Calças)",
+                                    type: "string",
+                                    default: ""
+                                },
+                                url: {
+                                    title: "URL da Subcategoria",
+                                    description: "Link da subcategoria (ex: /roupas/camisetas)",
+                                    type: "string",
+                                    default: ""
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

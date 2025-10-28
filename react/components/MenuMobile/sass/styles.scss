@@ -33,15 +33,15 @@
     justify-content: center;
 }
 
-.bannerMenuMobile{
-    height: 120px ;
+.bannerMenuMobile {
+    height: 120px;
     width: 100%;
     background-image: url('../../../../assets/images/bannerPrincipal1.jpg');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
 
-    .contentBannerMenu{
+    .contentBannerMenu {
         font-family: vars.$fontFamilyOpen;
         color: #fff;
         display: flex;
@@ -56,11 +56,84 @@
             font-weight: 600;
         }
 
-        a{
+        a {
             font-size: 12px;
             font-weight: 300;
             text-decoration: underline;
         }
+    }
+
+}
+
+.categoriesMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 16px;
+}
+
+
+.categoryItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+
+
+    .categoryHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+
+        .categoryLink {
+            font-size: 14px;
+            font-weight: 400;
+            font-family: vars.$fontFamilyOpen;
+            color: #1D1D1B;
+            text-decoration: none;
+        }
+
+    }
+
+    .toggleButton {
+        background: transparent;
+        border: none;
+        padding: 0;
+        transition: transform .2s ease-in-out;
+
+        &.open {
+            transform: rotate(90deg);
+
+        }
+
+    }
+
+    .subCategoriesContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-left: 12px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+
+        &.open {
+            max-height: 200px;
+            
+        }
+
+        .subCategoryLink {
+            font-size: 14px;
+            font-weight: 300;
+            font-family: vars.$fontFamilyOpen;
+            color: #1D1D1B;
+            text-decoration: none;
+        }
+
+
     }
 
 }

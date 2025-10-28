@@ -1,103 +1,41 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import styles from './sass/styles.css'
 
+// ============= INTERFACES =============
+interface SubCategory {
+    name: string
+    url: string
+}
+
+interface Category {
+    categoryName: string
+    categoryUrl: string
+    subCategories: SubCategory[]
+}
+
 interface MenuHeaderProps {
-    logo?: string;
-    onClose: () => void;
+    logo?: string
+    onClose: () => void
 }
 
 interface MenuMobileProps {
-    logo?: string;
+    logo?: string
     onClose: () => void
     isOpen: boolean
-    parentIdCategoria?: string;
+    categories: Category[]
 }
 
-interface ItensCategorys {
-    name: string;
-    id: number;
-    children: ItensCategorys[];
+interface CategoryItemProps {
+    category: Category
 }
 
-interface MenuCategorysProps {
-    parentIdCategoria?: string;
+interface MenuItensProps {
+    logo?: string
+    onClose: () => void
+    categories: Category[]
 }
 
-const MenuCategorys = ({ parentIdCategoria }: MenuCategorysProps) => {
-    const [categories, setCategories] = useState<ItensCategorys[]>([])
-
-    useEffect(() => {
-        if (!parentIdCategoria || parentIdCategoria.trim() === '') {
-            setCategories([]);
-            return;
-        }
-
-        const fetchCategorys = async () => {
-            try {
-                // Converte string para strig
-                const ids = parentIdCategoria
-                    .split(',')
-                    .map(id => parseInt(id.trim()))
-                    .filter(id => !isNaN(id))
-
-                console.log('IDs para buscar:', ids)
-
-                const res = await fetch(
-                    'https://gabrieldevtestes--wecode.myvtex.com/api/catalog_system/pub/category/tree/2'
-                )
-                const data = await res.json()
-
-                console.log('Árvore completa:', data)
-
-                // Encontra a categoria pai na árvore
-                const findCategory = (categories: ItensCategorys[], id: number): ItensCategorys | null => {
-                    for (const cat of categories) {
-                        if (cat.id === id) return cat
-                        if (cat.children && cat.children.length > 0) {
-                            const found = findCategory(cat.children, id)
-                            if (found) return found
-                        }
-                    }
-                    return null
-                }
-
-                // Busca todas as categorias pelos IDs
-                const foundCategories = ids
-                    .map(id => findCategory(data, id))
-                    .filter(cat => cat !== null) as ItensCategorys[]
-
-                console.log('Categorias encontradas:', foundCategories)
-                setCategories(foundCategories)
-
-            } catch (error) {
-                console.error("Erro ao buscar categorias", error)
-            }
-        }
-
-        fetchCategorys()
-    }, [parentIdCategoria])
-
-    if (categories.length === 0) return null
-
-    return (
-        <>
-            {categories.map((parentCategory) => (
-                <React.Fragment key={parentCategory.id}>
-                    
-                    <li className={styles.parentCategory}>
-                        <a>{parentCategory.name}</a>
-                    </li>
-
-                    {parentCategory.children && parentCategory.children.map((item) => (
-                        <li key={item.id} className={styles.childCategory}>
-                            <a>{item.name}</a>
-                        </li>
-                    ))}
-                </React.Fragment>
-            ))}
-        </>
-    )
-}
+// ============= COMPONENTES =============
 
 const LogoSvg = () => {
     return (
@@ -127,11 +65,11 @@ const MenuHeader = ({ logo, onClose }: MenuHeaderProps) => {
     return (
         <div className={styles.headerMenuMobile}>
             <div className={styles.logoMenuMobile}>
-                {logo ?
-                    <img src={logo} alt="" />
-                    :
+                {logo ? (
+                    <img src={logo} alt="Logo" />
+                ) : (
                     <LogoSvg />
-                }
+                )}
 
                 <button className={styles.closeButton} onClick={onClose}>
                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,37 +81,96 @@ const MenuHeader = ({ logo, onClose }: MenuHeaderProps) => {
             <div className={styles.bannerMenuMobile}>
                 <div className={styles.contentBannerMenu}>
                     <p>Celebration - 20 Anos</p>
-                    <a> Conheça</a>
+                    <a>Conheça</a>
                 </div>
             </div>
         </div>
     )
 }
 
-interface MenuItensProps {
-    logo?: string;
-    onClose: () => void;
-    parentIdCategoria?: string;
-}
+const CategoryItem = ({ category }: CategoryItemProps) => {
+    const [isOpen, setIsOpen] = useState(false)
+    const hasSubCategories = category.subCategories && category.subCategories.length > 0
 
-const MenuItens = ({ logo, onClose, parentIdCategoria }: MenuItensProps) => {
+    const toggleCategory = () => {
+        if (hasSubCategories) {
+            setIsOpen(!isOpen)
+        }
+    }
+
     return (
-        <div className={styles.menuItensContainer}>
-            <MenuHeader logo={logo} onClose={onClose} />
-            <ul className={styles.menuList}>
-                <MenuCategorys parentIdCategoria={parentIdCategoria} />
-            </ul>
+        <div className={styles.categoryItem}>
+            <div className={styles.categoryHeader} onClick={toggleCategory}>
+                <a
+                    href={category.categoryUrl}
+                    className={styles.categoryLink}
+                    onClick={(e) => {
+                        if (hasSubCategories) {
+                            e.preventDefault()
+                        }
+                    }}
+                >
+                    {category.categoryName}
+                </a>
+                {hasSubCategories && (
+                    <button className={`${styles.toggleButton}  ${isOpen ? styles.open : ''}`}>
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_7_3570)">
+                                <path d="M2.47067 7.99995L2 7.52928L5.29367 4.23562C5.35616 4.17311 5.39126 4.08834 5.39126 3.99995C5.39126 3.91156 5.35616 3.82679 5.29367 3.76428L2.00567 0.476949L2.477 0.00561523L5.76433 3.29295C5.9518 3.48048 6.05712 3.73478 6.05712 3.99995C6.05712 4.26511 5.9518 4.51942 5.76433 4.70695L2.47067 7.99995Z" fill="#1D1D1B" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_7_3570">
+                                    <rect width="8" height="8" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </button>
+                )}
+            </div>
+
+            {hasSubCategories && (
+                <div className={`${styles.subCategoriesContainer} ${isOpen ? styles.open : ''}`}>
+                    {category.subCategories.map((subCategory, index) => (
+                        <a
+                            key={index}
+                            href={subCategory.url}
+                            className={styles.subCategoryLink}
+                        >
+                            {subCategory.name}
+                        </a>
+                    ))}
+                </div>
+            )}
         </div>
     )
 }
 
-export const MenuMobile = ({ logo, onClose, isOpen, parentIdCategoria }: MenuMobileProps) => {
+const MenuItens = ({ logo, onClose, categories }: MenuItensProps) => {
+    return (
+        <div className={styles.menuItensContainer}>
+            <MenuHeader logo={logo} onClose={onClose} />
+
+            <div className={styles.categoriesMenu}>
+                {categories && categories.length > 0 ? (
+                    categories.map((category, index) => (
+                        <CategoryItem key={index} category={category} />
+                    ))
+                ) : (
+                    <p className={styles.noCategories}>Nenhuma categoria cadastrada</p>
+                )}
+            </div>
+        </div>
+    )
+}
+
+export const MenuMobile = ({ logo, onClose, isOpen, categories = [] }: MenuMobileProps) => {
     return (
         <div className={`${styles.menuMobileContainer} ${isOpen ? styles.menuOpen : ''}`}>
             <MenuItens
                 logo={logo}
                 onClose={onClose}
-                parentIdCategoria={parentIdCategoria}
+                categories={categories}
             />
         </div>
     )
