@@ -1,25 +1,28 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import styles from './sass/styles.css'
 
 // ============= INTERFACES =============
 interface SubCategory {
-    name: string
+    __editorItemTitle: string
     url: string
 }
 
 interface Category {
-    categoryName: string
+    __editorItemTitle: string
     categoryUrl: string
     subCategories: SubCategory[]
+    color?: string
 }
 
 interface MenuHeaderProps {
     logo?: string
+    bannerMenuMobile?: string
     onClose: () => void
 }
 
 interface MenuMobileProps {
     logo?: string
+    bannerMenuMobile?: string
     onClose: () => void
     isOpen: boolean
     categories: Category[]
@@ -31,6 +34,7 @@ interface CategoryItemProps {
 
 interface MenuItensProps {
     logo?: string
+    bannerMenuMobile?: string
     onClose: () => void
     categories: Category[]
 }
@@ -61,7 +65,9 @@ const LogoSvg = () => {
     )
 }
 
-const MenuHeader = ({ logo, onClose }: MenuHeaderProps) => {
+const bannerMenuMobileDefault = '../../../assets/images/bannerPrincipal1.jpg'
+
+const MenuHeader = ({ logo, onClose, bannerMenuMobile }: MenuHeaderProps) => {
     return (
         <div className={styles.headerMenuMobile}>
             <div className={styles.logoMenuMobile}>
@@ -79,6 +85,7 @@ const MenuHeader = ({ logo, onClose }: MenuHeaderProps) => {
             </div>
 
             <div className={styles.bannerMenuMobile}>
+                <img className={styles.imagemBannerMenu} src={!bannerMenuMobile ? bannerMenuMobileDefault : bannerMenuMobile} alt="" />
                 <div className={styles.contentBannerMenu}>
                     <p>Celebration - 20 Anos</p>
                     <a>Conheça</a>
@@ -104,18 +111,19 @@ const CategoryItem = ({ category }: CategoryItemProps) => {
                 <a
                     href={category.categoryUrl}
                     className={styles.categoryLink}
+                    style={{ color: category.color || undefined }}
                     onClick={(e) => {
                         if (hasSubCategories) {
                             e.preventDefault()
                         }
                     }}
                 >
-                    {category.categoryName}
+                    {category.__editorItemTitle}
                 </a>
                 {hasSubCategories && (
-                    <button className={`${styles.toggleButton}  ${isOpen ? styles.open : ''}`}>
+                    <button className={`${styles.toggleButton} ${isOpen ? styles.open : ''}`}>
                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_7_3570)">
+                            <g clipPath="url(#clip0_7_3570)">
                                 <path d="M2.47067 7.99995L2 7.52928L5.29367 4.23562C5.35616 4.17311 5.39126 4.08834 5.39126 3.99995C5.39126 3.91156 5.35616 3.82679 5.29367 3.76428L2.00567 0.476949L2.477 0.00561523L5.76433 3.29295C5.9518 3.48048 6.05712 3.73478 6.05712 3.99995C6.05712 4.26511 5.9518 4.51942 5.76433 4.70695L2.47067 7.99995Z" fill="#1D1D1B" />
                             </g>
                             <defs>
@@ -124,7 +132,6 @@ const CategoryItem = ({ category }: CategoryItemProps) => {
                                 </clipPath>
                             </defs>
                         </svg>
-
                     </button>
                 )}
             </div>
@@ -137,7 +144,7 @@ const CategoryItem = ({ category }: CategoryItemProps) => {
                             href={subCategory.url}
                             className={styles.subCategoryLink}
                         >
-                            {subCategory.name}
+                            {subCategory.__editorItemTitle}
                         </a>
                     ))}
                 </div>
@@ -146,10 +153,10 @@ const CategoryItem = ({ category }: CategoryItemProps) => {
     )
 }
 
-const MenuItens = ({ logo, onClose, categories }: MenuItensProps) => {
+const MenuItens = ({ logo, onClose, categories, bannerMenuMobile }: MenuItensProps) => {
     return (
         <div className={styles.menuItensContainer}>
-            <MenuHeader logo={logo} onClose={onClose} />
+            <MenuHeader logo={logo} onClose={onClose} bannerMenuMobile={bannerMenuMobile} />
 
             <div className={styles.categoriesMenu}>
                 {categories && categories.length > 0 ? (
@@ -164,13 +171,31 @@ const MenuItens = ({ logo, onClose, categories }: MenuItensProps) => {
     )
 }
 
-export const MenuMobile = ({ logo, onClose, isOpen, categories = [] }: MenuMobileProps) => {
+export const MenuMobile = ({ logo, onClose, isOpen, categories = [], bannerMenuMobile }: MenuMobileProps) => {
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [isOpen]);
+
     return (
+        
         <div className={`${styles.menuMobileContainer} ${isOpen ? styles.menuOpen : ''}`}>
+
+           
             <MenuItens
                 logo={logo}
                 onClose={onClose}
                 categories={categories}
+                bannerMenuMobile={bannerMenuMobile}
+
             />
         </div>
     )

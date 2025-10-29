@@ -40,11 +40,12 @@
                 "phone": 1
             },
             "infinite": true,
+            "usePagination": true,
             "showNavigationArrows": "never",
             "showPaginationDots": "always",
             "blockClass": "slider-banners-institucional",
-            "autoPlay": {
-                "timeout": 5000,
+            "autoplay": {
+                "timeout": 3000,
                 "stopOnHover": true
             }
         },

@@ -9,13 +9,13 @@
     background-color: #ffffff;
     overflow: hidden;
     transition: 0.3s ease-in-out;
-    z-index: 99999999;
+    z-index: 1000;
+  
 }
 
 .menuMobileContainer.menuOpen {
-    width: 331px;
+    width: 88%;
 }
-
 
 .logoMenuMobile {
     display: flex;
@@ -34,19 +34,30 @@
 }
 
 .bannerMenuMobile {
+    position: relative;
     height: 120px;
     width: 100%;
-    background-image: url('../../../../assets/images/bannerPrincipal1.jpg');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
+    overflow: hidden;
+
+    .imagemBannerMenu {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-position: bottom;
+        object-fit: cover;
+        z-index: 1;
+    }
 
     .contentBannerMenu {
+        position: relative;
+        z-index: 2;
         font-family: vars.$fontFamilyOpen;
         color: #fff;
         display: flex;
         justify-content: space-between;
-        align-items: end;
+        align-items: flex-end;
         height: 100%;
         padding: 20px;
 
@@ -60,10 +71,11 @@
             font-size: 12px;
             font-weight: 300;
             text-decoration: underline;
+            cursor: pointer;
         }
     }
-
 }
+
 
 .categoriesMenu {
     display: flex;
@@ -78,7 +90,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    gap: 12px;
+
+
 
 
     .categoryHeader {
@@ -108,7 +121,6 @@
             transform: rotate(90deg);
 
         }
-
     }
 
     .subCategoriesContainer {
@@ -122,7 +134,11 @@
 
         &.open {
             max-height: 200px;
-            
+
+            .subCategoryLink:first-child {
+                margin-top: 12px;
+            }
+
         }
 
         .subCategoryLink {

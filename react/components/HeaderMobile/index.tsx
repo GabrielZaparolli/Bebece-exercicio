@@ -4,23 +4,25 @@ import { MenuMobile } from "../MenuMobile"
 
 // ============= INTERFACES =============
 interface SubCategory {
-    name: string
+    __editorItemTitle: string
     url: string
 }
 
 interface Category {
-    categoryName: string
+    __editorItemTitle: string
     categoryUrl: string
     subCategories: SubCategory[]
+    color?: string
 }
 
 interface HeaderMobileProps {
     iconeMenu?: string
     logoMenu?: string
+    bannerMenuMobile?: string
     categories?: Category[]
 }
 
-
+// ============= COMPONENTE =============
 const IconeMenu = ({ iconeMenu }: { iconeMenu?: string }) => {
     if (iconeMenu) {
         return <img src={iconeMenu} alt="Menu" width="14" height="14" />
@@ -35,7 +37,7 @@ const IconeMenu = ({ iconeMenu }: { iconeMenu?: string }) => {
     )
 }
 
-export const HeaderMobile = ({ iconeMenu, logoMenu, categories = [] }: HeaderMobileProps) => {
+export const HeaderMobile = ({ iconeMenu, logoMenu, categories = [], bannerMenuMobile }: HeaderMobileProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const handleOpen = () => {
@@ -59,12 +61,13 @@ export const HeaderMobile = ({ iconeMenu, logoMenu, categories = [] }: HeaderMob
                 onClose={handleClose}
                 isOpen={isMenuOpen}
                 categories={categories}
+                bannerMenuMobile= {bannerMenuMobile}
             />
         </div>
     )
 }
 
-
+// ============= SCHEMA PARA SITE EDITOR =============
 HeaderMobile.schema = {
     title: "Header Mobile",
     description: "Cabeçalho mobile com menu de categorias",
@@ -86,6 +89,14 @@ HeaderMobile.schema = {
                 "ui:widget": "image-uploader"
             }
         },
+        bannerMenuMobile: {
+            title: "Banner do Menu Mobile",
+            description: "Banner que aparece dentro do menu mobile aberto (deixe vazio para usar o padrão)",
+            type: "string",
+            widget: {
+                "ui:widget": "image-uploader"
+            }
+        },
         categories: {
             title: "Categorias do Menu",
             description: "Configure as categorias e subcategorias que aparecerão no menu mobile",
@@ -96,21 +107,27 @@ HeaderMobile.schema = {
                 title: "Categoria",
                 type: "object",
                 properties: {
-                    categoryName: {
+                    __editorItemTitle: {
                         title: "Nome da Categoria",
-                        description: "Nome que aparecerá no menu (ex: Roupas, Calçados, Acessórios)",
+                        description: "Nome que aparecerá no menu (ex: Roupas, Calçados, Outlet)",
                         type: "string",
                         default: ""
                     },
                     categoryUrl: {
                         title: "URL da Categoria",
-                        description: "Link da categoria (ex: /roupas, /calcados). Se tiver subcategorias, este link é opcional",
+                        description: "Link da categoria (ex: /roupas, /outlet). Se tiver subcategorias, este link é opcional",
+                        type: "string",
+                        default: ""
+                    },
+                    color: {
+                        title: "Cor do Texto (Opcional)",
+                        description: "Cor personalizada em hexadecimal (ex: #FF0000 para vermelho, #00FF00 para verde). Deixe vazio para usar a cor padrão preta",
                         type: "string",
                         default: ""
                     },
                     subCategories: {
                         title: "Subcategorias",
-                        description: "Adicione subcategorias que aparecerão quando expandir a categoria principal",
+                        description: "Adicione subcategorias que aparecerão quando expandir a categoria principal. Deixe vazio para categoria sem subcategorias",
                         type: "array",
                         minItems: 0,
                         maxItems: 30,
@@ -118,9 +135,9 @@ HeaderMobile.schema = {
                             title: "Subcategoria",
                             type: "object",
                             properties: {
-                                name: {
+                                __editorItemTitle: {
                                     title: "Nome da Subcategoria",
-                                    description: "Nome que aparecerá no submenu (ex: Camisetas, Calças)",
+                                    description: "Nome que aparecerá no submenu (ex: Camisetas, Tênis)",
                                     type: "string",
                                     default: ""
                                 },

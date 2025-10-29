@@ -9,11 +9,11 @@
   background-color: #ffffff;
   overflow: hidden;
   transition: 0.3s ease-in-out;
-  z-index: 99999999;
+  z-index: 1000;
 }
 
 .menuMobileContainer.menuOpen {
-  width: 331px;
+  width: 88%;
 }
 
 .logoMenuMobile {
@@ -33,19 +33,29 @@
 }
 
 .bannerMenuMobile {
+  position: relative;
   height: 120px;
   width: 100%;
-  background-image: url("../../../../assets/images/bannerPrincipal1.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
+  overflow: hidden;
+}
+.bannerMenuMobile .imagemBannerMenu {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-position: bottom;
+  object-fit: cover;
+  z-index: 1;
 }
 .bannerMenuMobile .contentBannerMenu {
+  position: relative;
+  z-index: 2;
   font-family: "Open Sans", sans-serif;
   color: #fff;
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   height: 100%;
   padding: 20px;
 }
@@ -58,6 +68,7 @@
   font-size: 12px;
   font-weight: 300;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .categoriesMenu {
@@ -72,7 +83,6 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  gap: 12px;
 }
 .categoryItem .categoryHeader {
   display: flex;
@@ -108,6 +118,9 @@
 }
 .categoryItem .subCategoriesContainer.open {
   max-height: 200px;
+}
+.categoryItem .subCategoriesContainer.open .subCategoryLink:first-child {
+  margin-top: 12px;
 }
 .categoryItem .subCategoriesContainer .subCategoryLink {
   font-size: 14px;
