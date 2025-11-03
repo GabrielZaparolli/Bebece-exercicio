@@ -1,0 +1,8 @@
+{
+  "store.product": {
+    "children": [
+    //   "responsive-layout.desktop#pdp-exercicio",
+      "responsive-layout.mobile#pdp-exercicio"
+    ]
+  }
+}

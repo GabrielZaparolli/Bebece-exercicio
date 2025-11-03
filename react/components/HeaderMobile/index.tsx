@@ -67,7 +67,7 @@ export const HeaderMobile = ({ iconeMenu, logoMenu, categories = [], bannerMenuM
     )
 }
 
-// ============= SCHEMA PARA SITE EDITOR =============
+
 HeaderMobile.schema = {
     title: "Header Mobile",
     description: "Cabeçalho mobile com menu de categorias",
