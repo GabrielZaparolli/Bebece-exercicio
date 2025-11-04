@@ -25,7 +25,12 @@ export const BotaoProjetoPDP = () => {
     return (
         <>
             {mostrarBotao &&
-                <button className={styles.botaoProjetosPdpstyles}>Quero um projeto exclusivo com esse modelo de cozinha</button>
+                <span className={styles.botaoProjetosPdpstyles}>
+                    <a className={styles.linkBotaoProjetosPdp} href="https://loja.carraro.com.br/lp-projetos-de-cozinhas">
+                    Quero um projeto exclusivo com esse modelo de cozinha
+                    </a>
+                </span>
+
             }
         </>
     )
