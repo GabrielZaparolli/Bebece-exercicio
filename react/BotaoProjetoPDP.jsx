@@ -1,3 +1,3 @@
-import { BotaoProjetoPDP } from "./components/BotaoProjetosPDP";
+import { BotaoProjetoPDP } from './components/BotaoProjetosPDP'
 
-export default BotaoProjetoPDP;
+export default BotaoProjetoPDP

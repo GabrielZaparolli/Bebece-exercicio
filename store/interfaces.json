@@ -1,14 +1,14 @@
 {
-    "MenuMobile": {
-        "component": "MenuMobile",
-        "composition": "children"
-    },
-    "HeaderMobile" : {
-        "component": "HeaderMobile",
-        "composition": "children"
-    },
-    "BotaoProjetoPDP": {
-        "component": "BotaoProjetoPDP",
-        "composition": "children"
-    }
+  "MenuMobile": {
+    "component": "MenuMobile",
+    "composition": "children"
+  },
+  "HeaderMobile": {
+    "component": "HeaderMobile",
+    "composition": "children"
+  },
+  "BotaoProjetoPDP": {
+    "component": "BotaoProjetoPDP",
+    "composition": "children"
+  }
 }
