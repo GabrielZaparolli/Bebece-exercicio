@@ -21,6 +21,7 @@
             "product-identifier.product",
             "sku-selector#pdp",
             "product-price",
+            "BotaoProjetoPDP",
             "add-to-cart-button"
         ],
         "props": {
@@ -47,7 +48,13 @@
         "props": {
             "displayMode": "default",
             "hideImpossibleCombinations": true,
-            "showVariantName": true
+            "showVariantName": true,
+            "visibleVariations": [
+                "Tamanho"
+            ], 
+            "excludedVariations": [
+                "BotaoProjetosPdp"
+            ]
         }
     },
     "product-price": {

@@ -6,5 +6,9 @@
     "HeaderMobile" : {
         "component": "HeaderMobile",
         "composition": "children"
+    },
+    "BotaoProjetoPDP": {
+        "component": "BotaoProjetoPDP",
+        "composition": "children"
     }
 }

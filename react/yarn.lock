@@ -79,6 +79,10 @@ undici-types@~7.16.0:
   version "2.19.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-placed@2.19.0/public/@types/vtex.order-placed#277b037e919f0ff1ce75f81a5ae2393788f2cc12"
 
+"vtex.product-context@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.1/public/@types/vtex.product-context":
+  version "0.10.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.1/public/@types/vtex.product-context#86ceba68085420edcf54749f07e51a257d2e5d94"
+
 "vtex.product-details@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-details@1.22.0/public/@types/vtex.product-details":
   version "1.22.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-details@1.22.0/public/@types/vtex.product-details#c2829a3a2c8b8f48ee273280a86859449b9835f8"
@@ -195,6 +199,6 @@ undici-types@~7.16.0:
   version "1.18.2"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.wish-list@1.18.2/public/@types/vtex.wish-list#a7c756efa45b11a9548279e9014a971562147c20"
 
-"wecode.bebece-exercicio@https://gabrieldevtestes--wecode.myvtex.com/_v/private/typings/linked/v1/wecode.bebece-exercicio@0.1.2+build1762187921/public/@types/wecode.bebece-exercicio":
+"wecode.bebece-exercicio@https://gabrieldevtestes--wecode.myvtex.com/_v/private/typings/linked/v1/wecode.bebece-exercicio@0.1.2+build1762260130/public/@types/wecode.bebece-exercicio":
   version "0.1.2"
-  resolved "https://gabrieldevtestes--wecode.myvtex.com/_v/private/typings/linked/v1/wecode.bebece-exercicio@0.1.2+build1762187921/public/@types/wecode.bebece-exercicio#406ba8e5c43543e1223d2f0f8d1fc43c34bf5b29"
+  resolved "https://gabrieldevtestes--wecode.myvtex.com/_v/private/typings/linked/v1/wecode.bebece-exercicio@0.1.2+build1762260130/public/@types/wecode.bebece-exercicio#eb4e574cbaa7bd7dbf332e1d975ba2e5358a81a5"
